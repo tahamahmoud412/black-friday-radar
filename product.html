@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>تفاصيل العرض | رادار البلاك فرايدي</title>
+<meta name="description" content="تفاصيل عرض البلاك فرايدي: السعر قبل وبعد الخصم، والتوفير، ولينك الشراء، وعروض شبهه.">
+<meta name="theme-color" content="#120E1F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 15V5a2 2 0 0 1 2-2h10l14 14-12 12z' fill='%23FFD23F' stroke='%231B1630' stroke-width='2'/%3E%3Ccircle cx='9' cy='9' r='2.5' fill='%231B1630'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Reem+Kufi:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="in">
+    <a class="logo" href="./"><i>%</i><span>رادار <b>البلاك فرايدي</b></span></a>
+    <div class="status"><span class="dot" id="dot"></span><span id="statusText">بيحمّل…</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="crumbs" aria-label="مكانك في الموقع" id="crumbs"><a href="./">كل العروض</a></nav>
+
+  <section class="product" id="product" aria-live="polite">
+    <div class="gallery"><span class="ph">بيحمّل…</span></div>
+    <div class="panel"><div class="pricebox"><p class="dnote">بيحمّل تفاصيل العرض…</p></div></div>
+  </section>
+
+  <section style="display:grid;gap:16px" aria-labelledby="recH" id="recWrap" hidden>
+    <div class="head"><h2 id="recH">ممكن يعجبك كمان</h2><span id="recNote"></span></div>
+    <div class="grid" id="rec"></div>
+  </section>
+
+  <footer class="site">الأسعار بتتغير بسرعة في موسم الخصومات، فاتأكد من السعر في صفحة المتجر قبل ما تشتري. الموقع مش تابع لأي متجر.</footer>
+</main>
+
+<script src="assets/common.js"></script>
+<script>
+(function(){
+const {CATS,fmt,disc,saving,expired,dayLabel,ago,safeUrl,el,picture,card,loadData,setStatus,recommend}=BFR;
+const $=id=>document.getElementById(id);
+const id=new URLSearchParams(location.search).get("id")||"";
+
+function toast(msg){const t=el("div","toast",msg);t.setAttribute("role","status");document.body.appendChild(t);setTimeout(()=>t.remove(),2200)}
+
+function notFound(){
+  const p=$("product");p.textContent="";p.style.gridTemplateColumns="1fr";
+  const box=el("div","empty");
+  box.appendChild(el("p",null,"العرض ده مش موجود، يمكن خلص أو اتشال."));
+  const a=el("a","btn btn-hot","ارجع لكل العروض");a.href="./";box.appendChild(a);
+  p.appendChild(box);
+}
+
+function renderProduct(d,all){
+  document.title=d.title+" | رادار البلاك فرايدي";
+  const crumbs=$("crumbs");crumbs.textContent="";
+  const home=el("a",null,"كل العروض");home.href="./";crumbs.appendChild(home);
+  crumbs.appendChild(el("span",null,"/"));crumbs.appendChild(el("span",null,CATS[d.category]||"عرض"));
+  crumbs.appendChild(el("span",null,"/"));crumbs.appendChild(el("span",null,d.store));
+
+  const p=$("product");p.textContent="";
+  const gal=picture(d,"gallery");
+  const p0=disc(d);if(p0){const t=el("span","bigtag num","-"+p0+"%");gal.appendChild(t)}
+  p.appendChild(gal);
+
+  const panel=el("div","panel");
+  const meta=el("div","meta");meta.appendChild(el("span","store",d.store));
+  if(CATS[d.category])meta.appendChild(el("span","cat",CATS[d.category]));
+  if(expired(d))meta.appendChild(el("span","pill over","العرض خلص"));
+  panel.appendChild(meta);
+  panel.appendChild(el("h1",null,d.title));
+
+  const box=el("div","pricebox");
+  const row=el("div","row num");
+  row.appendChild(el("span","price",(d.priceFrom?"من ":"")+fmt(d.price)+" ج.م"));
+  if(d.oldPrice>d.price)row.appendChild(el("span","old","بدل "+fmt(d.oldPrice)+" ج.م"));
+  box.appendChild(row);
+  if(saving(d)){const r2=el("div","row");r2.appendChild(el("span","savebadge num","هتوفّر "+fmt(Math.round(saving(d)))+" ج.م"));const dt=el("span","num","خصم "+p0+"%");dt.style.color="var(--muted)";r2.appendChild(dt);box.appendChild(r2)}
+  if(d.endsAt&&!expired(d)){
+    const left=Math.ceil((Date.parse(d.endsAt+"T23:59:59+02:00")-Date.now())/86400000);
+    box.appendChild(el("div","ends num","⏳ العرض لحد "+dayLabel(d.endsAt)+(left<=3?" · فاضل "+(left<=1?"يوم واحد":left+" أيام"):"")));
+  }
+  const acts=el("div","actions");
+  const u=safeUrl(d.url);
+  if(u){const b=el("a","btn btn-hot","اشتري من "+d.store+" ←");b.href=u;b.target="_blank";b.rel="noopener nofollow";acts.appendChild(b)}
+  const share=el("button","btn btn-ghost","انسخ لينك العرض");share.type="button";
+  share.onclick=async()=>{
+    const link=location.href;
+    try{if(navigator.share){await navigator.share({title:d.title,url:link});return}}catch(e){if(e&&e.name==="AbortError")return}
+    try{await navigator.clipboard.writeText(link);toast("اتنسخ اللينك ✓")}catch(e){toast("انسخ اللينك من شريط العنوان")}
+  };
+  acts.appendChild(share);box.appendChild(acts);
+  panel.appendChild(box);
+
+  if(d.note){const n=el("div","notebox");n.appendChild(el("strong",null,"ملاحظة: "));n.appendChild(document.createTextNode(d.note));panel.appendChild(n)}
+
+  const facts=el("dl","facts");
+  const fact=(k,v)=>{facts.appendChild(el("dt",null,k));facts.appendChild(el("dd",null,v))};
+  fact("المتجر",d.store);
+  fact("القسم",CATS[d.category]||"—");
+  fact("السعر قبل الخصم",d.oldPrice?fmt(d.oldPrice)+" ج.م":"مش مكتوب");
+  fact("اتضاف على الرادار",ago(d.addedAt)||"—");
+  if(d.endsAt)fact("آخر يوم للعرض",dayLabel(d.endsAt));
+  panel.appendChild(facts);
+  panel.appendChild(el("p","dnote","السعر ده اللي كان ظاهر على موقع المتجر وقت ما العرض اتسجل. اتأكد منه قبل الدفع."));
+  p.appendChild(panel);
+
+  const recs=recommend(d,all,8);
+  if(recs.length){
+    $("recWrap").hidden=false;
+    $("recNote").textContent=CATS[d.category]?"عروض من "+CATS[d.category]+" ومن متاجر تانية":"";
+    const g=$("rec");g.textContent="";recs.forEach(r=>g.appendChild(card(r)));
+  }
+}
+
+(async()=>{
+  try{
+    const j=await loadData();
+    setStatus(j.lastCheck,true);
+    const d=j.deals.find(x=>x.id===id);
+    if(!d){notFound();return}
+    renderProduct(d,j.deals);
+  }catch(e){
+    setStatus(null,false);
+    const p=$("product");p.textContent="";p.appendChild(el("div","empty","التفاصيل ما حمّلتش. اتأكد من النت وافتح الصفحة تاني."));
+  }
+})();
+})();
+</script>
+</body>
+</html>

@@ -4,130 +4,79 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>رادار البلاك فرايدي | كل عروض نوفمبر في مصر في مكان واحد</title>
-<meta name="description" content="كل عروض البلاك فرايدي والجمعة البيضاء في مصر من جوميا وأمازون ونون وغيرهم، بالسعر ونسبة الخصم ولينك المنتج، وبتتحدث لوحدها كل يوم.">
+<meta name="description" content="كل عروض البلاك فرايدي والجمعة البيضاء في مصر من جوميا وأمازون ونون وبي تك و2B، بالصور والسعر ونسبة الخصم، وبتتحدث لوحدها كل يوم.">
 <meta property="og:title" content="رادار البلاك فرايدي">
-<meta property="og:description" content="كل عروض البلاك فرايدي في مصر في مكان واحد، وبتتحدث لوحدها.">
+<meta property="og:description" content="كل عروض البلاك فرايدي في مصر في مكان واحد، بالصور والأسعار، وبتتحدث لوحدها.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#D61F57">
+<meta name="theme-color" content="#120E1F">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 15V5a2 2 0 0 1 2-2h10l14 14-12 12z' fill='%23FFD23F' stroke='%231B1630' stroke-width='2'/%3E%3Ccircle cx='9' cy='9' r='2.5' fill='%231B1630'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Reem+Kufi:wght@600;700&display=swap">
-<style>
-/* Layout: a price-tag board. Header with countdown, a strip of store campaigns, filters, then a grid of tag-shaped deal cards. RTL. */
-:root{
-  --bg:#F2F0F6; --surface:#FFFFFF; --ink:#1B1630; --muted:#666079; --line:#E0DBEA;
-  --tag:#FFD23F; --tag-ink:#1B1630; --hot:#D61F57; --ok:#16804F; --soon:#9A5B00; --chip:#ECE8F4;
-  --pic:#FFFFFF; --pic-ink:#1B1630;
-  --display:"Reem Kufi", "IBM Plex Sans Arabic", Tahoma, sans-serif;
-  --body:"IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
-  color-scheme:light;
-}
-@media (prefers-color-scheme: dark){:root{
-  --bg:#13101C; --surface:#1D1929; --ink:#F1EEF8; --muted:#A39DB8; --line:#2F2A42;
-  --tag:#F5C518; --tag-ink:#1B1630; --hot:#FF5A85; --ok:#4CC38A; --soon:#E3A845; --chip:#2A2539; --pic:#F3F1F7; --pic-ink:#1B1630; color-scheme:dark}}
-*,*::before,*::after{box-sizing:border-box}
-html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6}
-[hidden]{display:none!important}
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px;display:grid;gap:28px}
-h1,h2{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.25}
-h2{font-size:1.25rem}
-.num{font-variant-numeric:tabular-nums}
-a{color:inherit}
-button,input,select{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--hot);outline-offset:2px;border-radius:6px}
-
-.top{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between}
-.brand{display:grid;gap:6px;min-width:0}
-.brand h1{font-size:clamp(1.9rem,5vw,2.8rem)}
-.brand h1 span{color:var(--hot)}
-.brand p{margin:0;color:var(--muted);max-width:60ch}
-.status{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.85rem}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
-.dot.live{background:var(--ok);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 60%,transparent)}70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.count{background:var(--ink);color:var(--bg);border-radius:14px;padding:14px 20px;display:grid;gap:2px;min-width:200px}
-.count small{opacity:.75;font-size:.8rem}
-.count b{font-family:var(--display);font-size:2rem;line-height:1.1}
-
-.camps{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
-.camp{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px;align-content:start}
-.camp .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.camp h3{margin:0;font-size:1rem}
-.camp .dates{font-size:.88rem;color:var(--muted)}
-.camp .note{font-size:.85rem;margin:0}
-.pill{font-size:.75rem;font-weight:600;padding:2px 10px;border-radius:999px;white-space:nowrap;border:1px solid currentColor}
-.pill.live{color:var(--ok)} .pill.soon{color:var(--soon)} .pill.over{color:var(--muted)}
-.conf{font-size:.75rem;color:var(--muted)}
-
-.bar{display:grid;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px}
-.bar .r{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.bar input[type=search]{flex:1 1 220px;min-width:0;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg)}
-.bar select{padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg)}
-.lbl{font-size:.78rem;color:var(--muted);letter-spacing:.02em;margin-inline-end:4px}
-.chip{border:1px solid var(--line);background:var(--chip);border-radius:999px;padding:5px 12px;cursor:pointer;font-size:.88rem}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.toggle{display:flex;gap:6px;align-items:center;font-size:.88rem;cursor:pointer}
-
-.head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
-.head span{color:var(--muted);font-size:.9rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
-.deal{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 12px 16px;display:grid;gap:10px;grid-template-rows:auto auto 1fr auto auto;min-width:0}
-.pic{display:grid;place-items:center;aspect-ratio:4/3;max-width:100%;background:var(--pic);border-radius:10px;overflow:hidden;text-decoration:none}
-.pic img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s ease}
-.deal:hover .pic img{transform:scale(1.04)}
-.pic .ph{font-family:var(--display);font-size:1.6rem;color:var(--pic-ink);opacity:.5}
-.deal > :not(.pic):not(.tag){padding-inline:4px}
-.deal.flash{animation:flash 2.4s ease-out}
-@keyframes flash{0%{border-color:var(--hot);box-shadow:0 0 0 3px color-mix(in srgb,var(--hot) 35%,transparent)}100%{}}
-.meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-.store{font-weight:700;font-size:.85rem}
-.cat{font-size:.75rem;color:var(--muted);background:var(--chip);border-radius:6px;padding:1px 8px}
-.new{font-size:.72rem;font-weight:700;color:var(--hot)}
-.tag{position:absolute;top:22px;left:22px;z-index:1;box-shadow:0 1px 3px rgb(0 0 0 / .15);background:var(--tag);color:var(--tag-ink);font-family:var(--display);font-size:1.1rem;padding:4px 12px 4px 10px;border-radius:4px 10px 10px 4px;display:flex;align-items:center;gap:6px}
-.tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--surface)}
-.title{margin:0;font-weight:600;font-size:.98rem;line-height:1.5;overflow-wrap:anywhere}
-.prices{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
-.price{font-size:1.45rem;font-weight:700}
-.old{color:var(--muted);text-decoration:line-through;font-size:.9rem}
-.save{width:100%;font-size:.82rem;color:var(--ok);font-weight:600}
-.dnote{font-size:.82rem;color:var(--muted);margin:0}
-.foot{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px dashed var(--line);padding-top:10px;font-size:.8rem;color:var(--muted)}
-.go{background:var(--hot);color:#fff;text-decoration:none;font-weight:600;padding:6px 14px;border-radius:8px;font-size:.85rem;white-space:nowrap}
-.go:hover{filter:brightness(1.08)}
-.empty{background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:28px;text-align:center;color:var(--muted)}
-footer{color:var(--muted);font-size:.82rem;max-width:75ch}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <div class="brand">
-      <h1>رادار <span>البلاك فرايدي</span></h1>
-      <p>كل العروض اللي بتنزل في جوميا وأمازون ونون وباقي المتاجر المصرية في مكان واحد. أي عرض جديد يظهر هنا لوحده بسعره ونسبة الخصم ولينك المنتج.</p>
-      <div class="status"><span class="dot" id="dot"></span><span id="statusText">بيحمّل العروض…</span></div>
-    </div>
-    <div class="count" aria-live="polite">
-      <small>باقي على الجمعة 27 نوفمبر</small>
-      <b class="num" id="countdown">—</b>
-    </div>
-  </header>
+<header class="topbar">
+  <div class="in">
+    <a class="logo" href="./"><i>%</i><span>رادار <b>البلاك فرايدي</b></span></a>
+    <div class="status"><span class="dot" id="dot"></span><span id="statusText">بيحمّل العروض…</span></div>
+  </div>
+</header>
 
+<section class="hero" aria-labelledby="heroH">
+  <div class="ghost" aria-hidden="true">-80%</div>
+  <div class="in">
+    <div>
+      <div class="kicker"><span>مباشر</span>العروض بتتحدث لوحدها كذا مرة في اليوم</div>
+      <h1 id="heroH">متدفعش <s class="strike">السعر كامل</s><br>كل خصومات <em>البلاك فرايدي</em> هنا</h1>
+      <p class="lede">جمعنالك عروض جوميا وأمازون ونون وبي تك و2B في صفحة واحدة، بالصور والأسعار ونسبة الخصم. أي عرض جديد بيظهر هنا أول ما ينزل.</p>
+      <p class="clock-label">باقي على الجمعة السودا، 27 نوفمبر</p>
+      <div class="clock num" id="clock" aria-live="off">
+        <div><b id="cd-d">00</b><small>يوم</small></div>
+        <div><b id="cd-h">00</b><small>ساعة</small></div>
+        <div><b id="cd-m">00</b><small>دقيقة</small></div>
+        <div class="sec"><b id="cd-s">00</b><small>ثانية</small></div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-hot" href="#deals">شوف كل العروض ↓</a>
+        <button class="btn btn-tag" type="button" id="bestBtn">أكبر خصم دلوقتي</button>
+      </div>
+      <div class="stats num" id="stats">
+        <div><b id="st-n">—</b><small>عرض شغّال</small></div>
+        <div><b id="st-s">—</b><small>متاجر</small></div>
+        <div><b id="st-max">—</b><small>أعلى خصم</small></div>
+        <div><b id="st-save">—</b><small>أكبر توفير في منتج</small></div>
+      </div>
+    </div>
+    <div>
+      <a class="spot" id="spot" href="#deals" aria-live="polite">
+        <span class="cap">🔥 عرض اللحظة</span>
+        <div id="spotBody"><div class="pic"><span class="ph">بيحمّل…</span></div></div>
+      </a>
+      <div class="dots" id="spotDots" style="margin-top:14px"></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-label="أعلى الخصومات"><div class="track" id="ticker"></div></div>
+
+<main class="wrap">
   <section aria-labelledby="campH" style="display:grid;gap:12px">
     <h2 id="campH">مواسم الخصومات في المتاجر</h2>
     <div class="camps" id="camps"></div>
   </section>
 
-  <section class="bar" aria-label="فلترة العروض">
+  <section class="bar" aria-label="فلترة العروض" id="deals" style="scroll-margin-top:80px">
     <div class="r">
+      <label class="sr" for="q">دوّر على منتج</label>
       <input type="search" id="q" placeholder="دوّر على منتج… مثلاً ثلاجة، آيفون، أديداس">
-      <select id="sort" aria-label="الترتيب">
+      <label class="sr" for="sort">الترتيب</label>
+      <select id="sort">
         <option value="new">الأحدث</option>
         <option value="disc">أعلى خصم</option>
         <option value="save">أكبر توفير بالجنيه</option>
         <option value="low">الأرخص</option>
+        <option value="high">الأغلى</option>
       </select>
       <label class="toggle"><input type="checkbox" id="onlyNew"> بس اللي نزل آخر 24 ساعة</label>
     </div>
@@ -135,106 +84,99 @@ footer{color:var(--muted);font-size:.82rem;max-width:75ch}
     <div class="r" id="catChips"><span class="lbl">القسم</span></div>
   </section>
 
-  <section style="display:grid;gap:12px" aria-labelledby="dealsH">
-    <div class="head"><h2 id="dealsH">العروض</h2><span id="countText" class="num"></span></div>
+  <section style="display:grid;gap:16px" aria-labelledby="dealsH">
+    <div class="head" id="gridTop" style="scroll-margin-top:80px"><h2 id="dealsH">العروض</h2><span id="countText" class="num"></span></div>
     <div class="grid" id="grid"><div class="empty">بيحمّل العروض…</div></div>
+    <nav class="pager num" id="pager" aria-label="صفحات العروض"></nav>
   </section>
 
-  <footer>الأسعار بتتغير بسرعة في موسم الخصومات، فاتأكد من السعر في صفحة المنتج قبل ما تشتري. المواعيد المكتوب جنبها «متوقع» لسه المتجر ما أعلنهاش رسمي. الموقع مش تابع لأي متجر.</footer>
-</div>
+  <footer class="site">الأسعار بتتغير بسرعة في موسم الخصومات، فاتأكد من السعر في صفحة المنتج قبل ما تشتري. المواعيد المكتوب جنبها «متوقع» لسه المتجر ما أعلنهاش رسمي. الموقع مش تابع لأي متجر.</footer>
+</main>
 
+<script src="assets/common.js"></script>
 <script>
 (function(){
-const CATS={phones:"موبايلات",electronics:"إلكترونيات",appliances:"أجهزة منزلية",home:"مطبخ وبيت",fashion:"موضة وأحذية",beauty:"جمال وعناية",baby:"أطفال",grocery:"سوبرماركت",other:"حاجات تانية"};
-const BF=new Date("2026-11-27T00:00:00+02:00");
-const DAY=86400000;
+const {CATS,DAY,BF,fmt,disc,saving,isNew,expired,dayLabel,safeUrl,el,productUrl,picture,discountTag,card,loadData,setStatus}=BFR;
 const $=id=>document.getElementById(id);
-const nf2=new Intl.NumberFormat("en-US",{minimumFractionDigits:0,maximumFractionDigits:2}),nf0=new Intl.NumberFormat("en-US",{maximumFractionDigits:0});
-const nf={format:v=>(v>=1000?nf0:nf2).format(v)};
-const df=new Intl.DateTimeFormat("ar-EG-u-nu-latn",{day:"numeric",month:"long"});
+const PER=12;
 let deals=[],camps=[],lastCheck=null,known=null,fresh=new Set();
-let st={q:"",sort:"new",onlyNew:false,store:"all",cat:"all"};
-try{Object.assign(st,JSON.parse(localStorage.getItem("bfr-filters")||"{}"))}catch(e){}
-function save(){try{localStorage.setItem("bfr-filters",JSON.stringify(st))}catch(e){}}
+let st={q:"",sort:"new",onlyNew:false,store:"all",cat:"all",page:1};
+// filters and page last for this visit only, so going back from a product page keeps your place
+try{Object.assign(st,JSON.parse(sessionStorage.getItem("bfr-filters")||"{}"))}catch(e){}
+function save(){try{sessionStorage.setItem("bfr-filters",JSON.stringify(st))}catch(e){}}
+function setF(k,v){st[k]=v;st.page=1;save();render()}
 
+/* countdown */
+const pad=n=>String(n).padStart(2,"0");
 function tick(){
-  const ms=BF-Date.now();
-  if(ms<=0){$("countdown").textContent=ms>-3*DAY?"النهارده!":"خلص الموسم";return}
-  const d=Math.floor(ms/DAY),h=Math.floor(ms%DAY/3600000);
-  $("countdown").textContent=d+" يوم و"+h+" ساعة";
+  let ms=Math.max(0,BF-Date.now());
+  $("cd-d").textContent=pad(Math.floor(ms/DAY));ms%=DAY;
+  $("cd-h").textContent=pad(Math.floor(ms/3600000));ms%=3600000;
+  $("cd-m").textContent=pad(Math.floor(ms/60000));ms%=60000;
+  $("cd-s").textContent=pad(Math.floor(ms/1000));
 }
-tick();setInterval(tick,60000);
+tick();setInterval(tick,1000);
 
-function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
-function disc(d){return d.oldPrice>d.price?Math.round((1-d.price/d.oldPrice)*100):0}
-function ago(iso){
-  const t=Date.parse(iso);if(!t)return"";
-  const m=Math.round((Date.now()-t)/60000);
-  if(m<1)return"لسه نازل";if(m<60)return"من "+m+" دقيقة";
-  const h=Math.round(m/60);if(h<24)return"من "+h+" ساعة";
-  const d=Math.round(h/24);return d===1?"من يوم":"من "+d+" أيام";
-}
-function isNew(d){return Date.now()-Date.parse(d.addedAt)<DAY}
-function expired(d){return d.endsAt&&Date.parse(d.endsAt+"T23:59:59+02:00")<Date.now()}
-function safeUrl(u){try{const x=new URL(u);return x.protocol==="https:"||x.protocol==="http:"?x.href:null}catch(e){return null}}
-
+/* filters */
 $("q").value=st.q;$("sort").value=st.sort;$("onlyNew").checked=st.onlyNew;
-$("q").addEventListener("input",e=>{st.q=e.target.value;save();render()});
-$("sort").addEventListener("change",e=>{st.sort=e.target.value;save();render()});
-$("onlyNew").addEventListener("change",e=>{st.onlyNew=e.target.checked;save();render()});
+$("q").addEventListener("input",e=>setF("q",e.target.value));
+$("sort").addEventListener("change",e=>setF("sort",e.target.value));
+$("onlyNew").addEventListener("change",e=>setF("onlyNew",e.target.checked));
+$("bestBtn").addEventListener("click",()=>{Object.assign(st,{sort:"disc",store:"all",cat:"all",q:"",onlyNew:false,page:1});$("sort").value="disc";$("q").value="";$("onlyNew").checked=false;save();render();$("deals").scrollIntoView()});
 function chips(boxId,items,key){
   const box=$(boxId);[...box.querySelectorAll(".chip")].forEach(c=>c.remove());
   [["all","الكل"],...items].forEach(([v,label])=>{
     const b=el("button","chip",label);b.type="button";b.setAttribute("aria-pressed",String(st[key]===v));
-    b.onclick=()=>{st[key]=v;save();render()};box.appendChild(b);
+    b.onclick=()=>setF(key,v);box.appendChild(b);
   });
 }
 
-function render(){
-  const live=deals.filter(d=>!expired(d));
-  const stores=[...new Set(live.map(d=>d.store))].sort();
-  const cats=[...new Set(live.map(d=>d.category))].filter(c=>CATS[c]);
-  if(st.store!=="all"&&!stores.includes(st.store))st.store="all";
-  if(st.cat!=="all"&&!cats.includes(st.cat))st.cat="all";
-  chips("storeChips",stores.map(s=>[s,s]),"store");
-  chips("catChips",cats.map(c=>[c,CATS[c]]),"cat");
+/* hero: stats, spotlight, ticker */
+let spotList=[],spotI=0,spotTimer=null;
+function renderHero(live){
+  $("st-n").textContent=live.length;
+  $("st-s").textContent=new Set(live.map(d=>d.store)).size;
+  $("st-max").textContent=live.length?Math.max(...live.map(disc))+"%":"—";
+  $("st-max").dir="ltr";
+  const ms=live.length?Math.max(...live.map(saving)):0;
+  $("st-save").textContent=ms?fmt(Math.round(ms))+" ج.م":"—";
 
-  const q=st.q.trim().toLowerCase();
-  let list=live.filter(d=>(st.store==="all"||d.store===st.store)&&(st.cat==="all"||d.category===st.cat)&&(!st.onlyNew||isNew(d))&&(!q||(d.title+" "+d.store+" "+(d.note||"")).toLowerCase().includes(q)));
-  const by={new:(a,b)=>(b.addedAt||"").localeCompare(a.addedAt||""),disc:(a,b)=>disc(b)-disc(a),save:(a,b)=>((b.oldPrice||b.price)-b.price)-((a.oldPrice||a.price)-a.price),low:(a,b)=>a.price-b.price};
-  list.sort(by[st.sort]||by.new);
-  $("countText").textContent=list.length+" عرض من "+live.length;
+  const ranked=live.filter(d=>d.image&&disc(d)>0).sort((a,b)=>disc(b)-disc(a));
+  // spotlight: one top deal per store first, so it's not five sneakers in a row
+  const seen=new Set();spotList=[];
+  for(const d of ranked){if(!seen.has(d.store)){seen.add(d.store);spotList.push(d)}if(spotList.length===5)break}
+  if(spotI>=spotList.length)spotI=0;
+  showSpot();
+  if(!spotTimer&&!matchMedia("(prefers-reduced-motion: reduce)").matches)spotTimer=setInterval(()=>{if(!document.hidden&&spotList.length){spotI=(spotI+1)%spotList.length;showSpot()}},4500);
 
-  const g=$("grid");g.textContent="";
-  if(!list.length){g.appendChild(el("div","empty",live.length?"مفيش عروض بالفلتر ده. جرّب تشيل فلتر.":"لسه مفيش عروض متسجلة. أول ما عرض ينزل هيظهر هنا لوحده."));return}
-  for(const d of list){
-    const c=el("article","deal"+(fresh.has(d.id)?" flash":""));
-    const p=disc(d);
-    if(p){const tg=el("span","tag num","-"+p+"%");tg.dir="ltr";c.appendChild(tg)}
-    const link=safeUrl(d.url),pic=el(link?"a":"div","pic");
-    if(link){pic.href=link;pic.target="_blank";pic.rel="noopener nofollow";pic.tabIndex=-1;pic.setAttribute("aria-hidden","true")}
-    const ph=()=>{pic.textContent="";pic.appendChild(el("span","ph",d.store))};
-    const img=safeUrl(d.image);
-    if(img){const im=document.createElement("img");im.src=img;im.alt="";im.loading="lazy";im.decoding="async";im.referrerPolicy="no-referrer";im.onerror=ph;pic.appendChild(im)}else ph();
-    c.appendChild(pic);
-    const m=el("div","meta");m.appendChild(el("span","store",d.store));
-    if(CATS[d.category])m.appendChild(el("span","cat",CATS[d.category]));
-    if(isNew(d))m.appendChild(el("span","new","● جديد"));
-    c.appendChild(m);
-    c.appendChild(el("h3","title",d.title));
-    const pr=el("div","prices num");
-    pr.appendChild(el("span","price",(d.priceFrom?"من ":"")+nf.format(d.price)+" ج.م"));
-    if(d.oldPrice>d.price){pr.appendChild(el("span","old",nf.format(d.oldPrice)));pr.appendChild(el("span","save","هتوفّر "+nf.format(Math.round(d.oldPrice-d.price))+" ج.م"))}
-    c.appendChild(pr);
-    const info=[];if(d.note)info.push(d.note);if(d.endsAt)info.push("لحد "+df.format(new Date(d.endsAt+"T12:00:00+02:00")));
-    c.appendChild(info.length?el("p","dnote",info.join(" · ")):el("span"));
-    const f=el("div","foot");
-    f.appendChild(el("span","num",ago(d.addedAt)));
-    const u=safeUrl(d.url);if(u){const a=el("a","go","شوف العرض ←");a.href=u;a.target="_blank";a.rel="noopener nofollow";f.appendChild(a)}
-    c.appendChild(f);g.appendChild(c);
+  const top=ranked.slice(0,16),tr=$("ticker");tr.textContent="";
+  if(!top.length){tr.parentElement.hidden=true;return}
+  tr.parentElement.hidden=false;
+  for(let k=0;k<2;k++)for(const d of top){
+    const a=el("a");a.href=productUrl(d);if(k)a.setAttribute("aria-hidden","true"),a.tabIndex=-1;
+    const im=document.createElement("img");im.src=d.image;im.alt="";im.loading="lazy";im.referrerPolicy="no-referrer";a.appendChild(im);
+    a.appendChild(el("span",null,d.title.length>38?d.title.slice(0,38)+"…":d.title));
+    const b=el("b",null,"-"+disc(d)+"%");a.appendChild(b);tr.appendChild(a);
   }
 }
+function showSpot(){
+  const box=$("spotBody"),dots=$("spotDots");box.textContent="";dots.textContent="";
+  const d=spotList[spotI];
+  if(!d){box.appendChild(el("div","pic")).appendChild(el("span","ph","لسه مفيش عروض"));return}
+  $("spot").href=productUrl(d);
+  const wrap=el("div","fade");wrap.style.display="grid";wrap.style.gap="12px";
+  wrap.appendChild(el("span","big num","-"+disc(d)+"%")).dir="ltr";
+  wrap.appendChild(picture(d));
+  const meta=el("div","meta");meta.appendChild(el("span","store",d.store));if(CATS[d.category])meta.appendChild(el("span","cat",CATS[d.category]));wrap.appendChild(meta);
+  wrap.appendChild(el("h3",null,d.title));
+  const row=el("div","row num");row.appendChild(el("span","price",fmt(d.price)+" ج.م"));
+  if(d.oldPrice)row.appendChild(el("span","old",fmt(d.oldPrice)+" ج.م"));
+  row.appendChild(el("span","save","هتوفّر "+fmt(Math.round(saving(d)))+" ج.م"));
+  wrap.appendChild(row);box.appendChild(wrap);
+  spotList.forEach((x,i)=>{const b=el("button");b.type="button";b.setAttribute("aria-label","عرض "+(i+1));b.setAttribute("aria-current",String(i===spotI));b.onclick=()=>{spotI=i;showSpot()};dots.appendChild(b)});
+}
 
+/* campaigns */
 function renderCamps(){
   const box=$("camps");box.textContent="";
   if(!camps.length){box.appendChild(el("div","empty","مواعيد حملات المتاجر هتظهر هنا."));return}
@@ -246,7 +188,7 @@ function renderCamps(){
     r.appendChild(el("h3",null,c.store+" · "+c.name));
     r.appendChild(el("span","pill "+c.state,c.state==="live"?"شغّال دلوقتي":c.state==="soon"?"قريب":"خلص"));
     k.appendChild(r);
-    k.appendChild(el("div","dates num",df.format(new Date(c.s))+" ← "+df.format(new Date(c.e))+(c.upTo?" · خصم لحد "+c.upTo+"%":"")));
+    k.appendChild(el("div","dates num",dayLabel(c.start)+" ← "+dayLabel(c.end)+(c.upTo?" · خصم لحد "+c.upTo+"%":"")));
     k.appendChild(el("span","conf",c.confirmed?"✓ مؤكد من المتجر أو الصحافة":"متوقع، لسه مش رسمي"));
     if(c.note)k.appendChild(el("p","note",c.note));
     const u=safeUrl(c.url);if(u){const a=el("a","conf","صفحة الحملة ←");a.href=u;a.target="_blank";a.rel="noopener nofollow";k.appendChild(a)}
@@ -254,24 +196,57 @@ function renderCamps(){
   }
 }
 
-function setStatus(){
-  $("statusText").textContent=lastCheck?"بيتحدث لوحده · آخر تحديث "+ago(lastCheck):"بيتحدث لوحده";
-  $("dot").className="dot live";
+/* grid + pagination */
+function render(){
+  const live=deals.filter(d=>!expired(d));
+  const stores=[...new Set(live.map(d=>d.store))].sort();
+  const cats=[...new Set(live.map(d=>d.category))].filter(c=>CATS[c]);
+  if(st.store!=="all"&&!stores.includes(st.store))st.store="all";
+  if(st.cat!=="all"&&!cats.includes(st.cat))st.cat="all";
+  chips("storeChips",stores.map(s=>[s,s]),"store");
+  chips("catChips",cats.map(c=>[c,CATS[c]]),"cat");
+
+  const q=st.q.trim().toLowerCase();
+  const list=live.filter(d=>(st.store==="all"||d.store===st.store)&&(st.cat==="all"||d.category===st.cat)&&(!st.onlyNew||isNew(d))&&(!q||(d.title+" "+d.store+" "+(d.note||"")).toLowerCase().includes(q)));
+  const by={new:(a,b)=>(b.addedAt||"").localeCompare(a.addedAt||""),disc:(a,b)=>disc(b)-disc(a),save:(a,b)=>saving(b)-saving(a),low:(a,b)=>a.price-b.price,high:(a,b)=>b.price-a.price};
+  list.sort(by[st.sort]||by.new);
+
+  const pages=Math.max(1,Math.ceil(list.length/PER));
+  if(st.page>pages)st.page=pages;if(st.page<1)st.page=1;
+  const from=(st.page-1)*PER,slice=list.slice(from,from+PER);
+  $("countText").textContent=list.length?("عرض "+(from+1)+"–"+(from+slice.length)+" من "+list.length):"";
+
+  const g=$("grid");g.textContent="";
+  if(!list.length)g.appendChild(el("div","empty",live.length?"مفيش عروض بالفلتر ده. جرّب تشيل فلتر.":"لسه مفيش عروض متسجلة. أول ما عرض ينزل هيظهر هنا لوحده."));
+  for(const d of slice)g.appendChild(card(d,{flash:fresh.has(d.id)}));
+  renderPager(pages);
+}
+function go(p){st.page=p;save();render();$("gridTop").scrollIntoView()}
+function renderPager(pages){
+  const nav=$("pager");nav.textContent="";
+  if(pages<=1)return;
+  const btn=(label,p,opts={})=>{const b=el("button",null,label);b.type="button";if(opts.cur)b.setAttribute("aria-current","page");if(opts.dis)b.disabled=true;if(opts.aria)b.setAttribute("aria-label",opts.aria);b.onclick=()=>go(p);nav.appendChild(b)};
+  btn("→ السابق",st.page-1,{dis:st.page===1,aria:"الصفحة السابقة"});
+  const set=new Set([1,pages,st.page-1,st.page,st.page+1].filter(p=>p>=1&&p<=pages));
+  let prev=0;
+  for(const p of [...set].sort((a,b)=>a-b)){
+    if(p-prev>1)nav.appendChild(el("span","gap","…"));
+    btn(String(p),p,{cur:p===st.page,aria:"صفحة "+p});prev=p;
+  }
+  btn("التالي ←",st.page+1,{dis:st.page===pages,aria:"الصفحة التالية"});
 }
 
+/* data */
 async function load(){
   try{
-    const r=await fetch("data/deals.json?t="+Date.now(),{cache:"no-store"});
-    if(!r.ok)throw new Error(r.status);
-    const j=await r.json();
-    const list=(j.deals||[]).filter(d=>d&&d.id&&d.title&&typeof d.price==="number");
-    if(known){list.forEach(d=>{if(!known.has(d.id)){fresh.add(d.id);setTimeout(()=>fresh.delete(d.id),3000)}})}
-    known=new Set(list.map(d=>d.id));
-    deals=list;camps=(j.campaigns||[]).filter(c=>c&&c.start&&c.end);lastCheck=j.lastCheck||null;
-    setStatus();render();renderCamps();
+    const j=await loadData();
+    if(known)j.deals.forEach(d=>{if(!known.has(d.id)){fresh.add(d.id);setTimeout(()=>fresh.delete(d.id),3000)}});
+    known=new Set(j.deals.map(d=>d.id));
+    deals=j.deals;camps=j.campaigns;lastCheck=j.lastCheck;
+    setStatus(lastCheck,true);renderHero(deals.filter(d=>!expired(d)));render();renderCamps();
   }catch(e){
     if(!known){$("grid").textContent="";$("grid").appendChild(el("div","empty","العروض ما حمّلتش. اتأكد من النت وافتح الصفحة تاني."))}
-    $("statusText").textContent="مش قادر يجيب آخر تحديث دلوقتي";$("dot").className="dot";
+    setStatus(null,false);
   }
 }
 load();
