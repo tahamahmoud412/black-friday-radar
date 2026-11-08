@@ -7,6 +7,7 @@
   /* hero is a deliberate dark band in both themes */
   --hero:#120E1F; --hero-2:#1E1733; --hero-ink:#FBF8FF; --hero-muted:#B9B0D3; --hero-line:#3A3057;
   --display:"Reem Kufi", "IBM Plex Sans Arabic", Tahoma, sans-serif;
+  --brand:"Lalezar", "Reem Kufi", "IBM Plex Sans Arabic", Tahoma, sans-serif;
   --body:"IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
   color-scheme:light;
 }
@@ -31,9 +32,11 @@ button,input,select{font:inherit;color:inherit}
 .topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--hero) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--hero-line);color:var(--hero-ink)}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--hero)}
 .topbar .in{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:10px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-size:1.15rem}
-.logo i{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:6px 12px 12px 6px;background:var(--tag);color:var(--tag-ink);font-style:normal;font-size:.8rem}
-.logo b{color:var(--hot);font-weight:700}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;font-family:var(--brand);font-weight:400;font-size:1.7rem;line-height:1;letter-spacing:0}
+.logo span{padding-top:.12em}
+.logo .mark{width:40px;height:40px;flex:none;filter:drop-shadow(0 4px 10px rgb(245 197 24 / .35));transition:transform .25s ease}
+.logo:hover .mark{transform:rotate(-8deg) scale(1.06)}
+.logo b{color:var(--tag);font-weight:400}
 .status{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--hero-muted)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--hero-muted);flex:none}
 .dot.live{background:#4CC38A;animation:pulse 2s infinite}
@@ -192,7 +195,7 @@ footer.site{color:var(--muted);font-size:.82rem;max-width:75ch}
 /* ---------- footer + receipt credit ---------- */
 .site-foot{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:36px;align-items:center;border-top:1px dashed var(--line);padding-top:32px;margin-top:8px}
 .site-foot .disclaimer{color:var(--muted);font-size:.85rem;max-width:58ch;margin:0;display:grid;gap:10px}
-.site-foot .disclaimer strong{color:var(--ink);font-family:var(--display);font-size:1.15rem;font-weight:600}
+.site-foot .disclaimer strong{color:var(--ink);font-family:var(--brand);font-size:1.5rem;font-weight:400;line-height:1.2}
 .receipt{--paper:#FFFDF6;--rink:#221C38;--rmuted:#6E6782;
   position:relative;width:min(340px,100%);justify-self:end;background:var(--paper);color:var(--rink);
   font-family:"IBM Plex Mono","IBM Plex Sans Arabic",monospace;font-size:.82rem;line-height:1.7;
@@ -266,8 +269,8 @@ footer.site{color:var(--muted);font-size:.82rem;max-width:75ch}
   .wrap{gap:22px;padding-block:20px 36px}
   h2{font-size:1.15rem}
   .topbar .in{padding-block:8px}
-  .logo{font-size:1rem}
-  .logo i{width:26px;height:26px}
+  .logo{font-size:1.4rem}
+  .logo .mark{width:34px;height:34px}
 
   /* hero */
   .hero .in{padding-block:26px 34px;gap:28px}
