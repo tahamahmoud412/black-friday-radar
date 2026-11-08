@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>تفاصيل العرض | رادار البلاك فرايدي</title>
 <meta name="description" content="تفاصيل عرض البلاك فرايدي: السعر قبل وبعد الخصم، والتوفير، ولينك الشراء، وعروض شبهه.">
+<meta name="author" content="طه محمود (Taha Mahmoud)">
 <meta name="theme-color" content="#120E1F">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 15V5a2 2 0 0 1 2-2h10l14 14-12 12z' fill='%23FFD23F' stroke='%231B1630' stroke-width='2'/%3E%3Ccircle cx='9' cy='9' r='2.5' fill='%231B1630'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Reem+Kufi:wght@600;700&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Reem+Kufi:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
 <header class="topbar">
@@ -33,10 +34,17 @@
     <div class="grid" id="rec"></div>
   </section>
 
-  <footer class="site">الأسعار بتتغير بسرعة في موسم الخصومات، فاتأكد من السعر في صفحة المتجر قبل ما تشتري. الموقع مش تابع لأي متجر.</footer>
+  <footer class="site-foot">
+    <div class="disclaimer">
+      <strong>رادار البلاك فرايدي</strong>
+      <p style="margin:0">الأسعار بتتغير بسرعة في موسم الخصومات، فاتأكد من السعر في صفحة المتجر قبل ما تشتري.</p>
+      <p style="margin:0">الموقع مش تابع لأي متجر.</p>
+    </div>
+    <div id="credit"></div>
+  </footer>
 </main>
 
-<script src="assets/common.js?v=3"></script>
+<script src="assets/common.js?v=4"></script>
 <script>
 (function(){
 const {CATS,fmt,disc,saving,expired,dayLabel,ago,safeUrl,el,picture,card,loadData,setStatus,recommend}=BFR;
@@ -129,7 +137,7 @@ function renderProduct(d,all){
 (async()=>{
   try{
     const j=await loadData();
-    setStatus(j.lastCheck,true);
+    setStatus(j.lastCheck,true);BFR.creditFrom(j.deals);
     const d=j.deals.find(x=>x.id===id);
     if(!d){notFound();return}
     renderProduct(d,j.deals);

@@ -106,5 +106,54 @@
       .map(x => x.d);
   }
 
-  window.BFR = { CATS, DAY, BF, fmt, disc, saving, isNew, expired, dayLabel, ago, safeUrl, el, productUrl, picture, discountTag, card, loadData, setStatus, recommend };
+  // Footer credit: a shop receipt signed by the site's maker. The barcode is drawn from the letters of the name.
+  const MAKER = { ar: "طه محمود", en: "TAHA MAHMOUD", link: "https://github.com/tahamahmoud412", handle: "@tahamahmoud412" };
+  function barcode(text) {
+    const NS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("class", "bars"); svg.setAttribute("aria-hidden", "true"); svg.setAttribute("preserveAspectRatio", "none");
+    let x = 0; const parts = [];
+    const bar = (w, on) => { if (on) parts.push([x, w]); x += w; };
+    bar(2, 1); bar(1, 0); bar(2, 1); bar(2, 0);
+    for (const ch of text.replace(/\s/g, "")) {
+      const c = ch.charCodeAt(0);
+      for (let i = 0; i < 6; i++) bar(1 + ((c >> i) & 1) * 2, i % 2 === 0);
+      bar(1, 0);
+    }
+    bar(2, 1); bar(1, 0); bar(2, 1);
+    svg.setAttribute("viewBox", "0 0 " + x + " 40");
+    for (const [px, w] of parts) { const r = document.createElementNS(NS, "rect"); r.setAttribute("x", px); r.setAttribute("y", 0); r.setAttribute("width", w); r.setAttribute("height", 40); svg.appendChild(r); }
+    return svg;
+  }
+  function credit(info) {
+    const host = document.getElementById("credit"); if (!host) return;
+    info = info || {};
+    host.textContent = "";
+    const r = el("div", "receipt"); r.setAttribute("role", "group"); r.setAttribute("aria-label", "الموقع من تصميم وتنفيذ " + MAKER.ar);
+    const h = el("div", "rh"); h.appendChild(el("b", null, "رادار البلاك فرايدي"));
+    const sub = el("small", "num"); const inv = el("bdi", null, "#BF-2026"); inv.dir = "ltr";
+    sub.append("فاتورة رقم ", inv, " · " + dayLabel(new Date().toISOString())); h.appendChild(sub); r.appendChild(h);
+    r.appendChild(el("hr"));
+    const line = (k, v, nm) => { const l = el("div", "ln"); l.appendChild(el("span", "k", k)); l.appendChild(el("span", "fill")); l.appendChild(el("span", "v" + (nm ? " nm" : ""), v)); r.appendChild(l); };
+    line("الفكرة", MAKER.ar, true);
+    line("التصميم", MAKER.ar, true);
+    line("البرمجة", MAKER.ar, true);
+    line("عدد العروض", info.deals != null ? String(info.deals) : "—");
+    line("المتاجر", info.stores != null ? String(info.stores) : "—");
+    line("أكبر خصم", info.max ? info.max + "%" : "—");
+    r.appendChild(el("hr"));
+    const t = el("div", "total"); t.appendChild(el("span", null, "الإجمالي")); t.appendChild(el("b", "num", "0.00 ج.م")); r.appendChild(t);
+    r.appendChild(el("p", "tnote", "الموقع ببلاش… والتوفير كله ليك"));
+    r.appendChild(barcode(MAKER.en));
+    r.appendChild(el("div", "spell", MAKER.en));
+    const th = el("div", "thanks"); th.appendChild(document.createTextNode("شكرًا لزيارتك ♥ ")); const a = el("a", null, MAKER.handle); a.href = MAKER.link; a.target = "_blank"; a.rel = "noopener"; th.appendChild(a); r.appendChild(th);
+    const s = el("div", "stamp"); s.setAttribute("aria-hidden", "true"); const sb = el("span"); sb.appendChild(el("b", null, "صُنع بإيد")); sb.appendChild(document.createTextNode(MAKER.ar)); s.appendChild(sb); r.appendChild(s);
+    host.appendChild(r);
+  }
+  function creditFrom(deals) {
+    const live = deals.filter(d => !expired(d));
+    credit({ deals: live.length, stores: new Set(live.map(d => d.store)).size, max: live.length ? Math.max(...live.map(disc)) : 0 });
+  }
+
+  window.BFR = { credit, creditFrom, CATS, DAY, BF, fmt, disc, saving, isNew, expired, dayLabel, ago, safeUrl, el, productUrl, picture, discountTag, card, loadData, setStatus, recommend };
 })();

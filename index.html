@@ -8,12 +8,13 @@
 <meta property="og:title" content="رادار البلاك فرايدي">
 <meta property="og:description" content="كل عروض البلاك فرايدي في مصر في مكان واحد، بالصور والأسعار.">
 <meta property="og:type" content="website">
+<meta name="author" content="طه محمود (Taha Mahmoud)">
 <meta name="theme-color" content="#120E1F">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 15V5a2 2 0 0 1 2-2h10l14 14-12 12z' fill='%23FFD23F' stroke='%231B1630' stroke-width='2'/%3E%3Ccircle cx='9' cy='9' r='2.5' fill='%231B1630'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Reem+Kufi:wght@600;700&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Reem+Kufi:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
 <header class="topbar">
@@ -90,10 +91,17 @@
     <nav class="pager num" id="pager" aria-label="صفحات العروض"></nav>
   </section>
 
-  <footer class="site">الأسعار بتتغير بسرعة في موسم الخصومات، فاتأكد من السعر في صفحة المنتج قبل ما تشتري. المواعيد المكتوب جنبها «متوقع» لسه المتجر ما أعلنهاش رسمي. الموقع مش تابع لأي متجر.</footer>
+  <footer class="site-foot">
+    <div class="disclaimer">
+      <strong>رادار البلاك فرايدي</strong>
+      <p style="margin:0">الأسعار بتتغير بسرعة في موسم الخصومات، فاتأكد من السعر في صفحة المنتج قبل ما تشتري. المواعيد المكتوب جنبها «متوقع» لسه المتجر ما أعلنهاش رسمي.</p>
+      <p style="margin:0">الموقع مش تابع لأي متجر.</p>
+    </div>
+    <div id="credit"></div>
+  </footer>
 </main>
 
-<script src="assets/common.js?v=3"></script>
+<script src="assets/common.js?v=4"></script>
 <script>
 (function(){
 const {CATS,DAY,BF,fmt,disc,saving,isNew,expired,dayLabel,safeUrl,el,productUrl,picture,discountTag,card,loadData,setStatus}=BFR;
@@ -244,7 +252,7 @@ async function load(){
     if(known)j.deals.forEach(d=>{if(!known.has(d.id)){fresh.add(d.id);setTimeout(()=>fresh.delete(d.id),3000)}});
     known=new Set(j.deals.map(d=>d.id));
     deals=j.deals;camps=j.campaigns;lastCheck=j.lastCheck;
-    setStatus(lastCheck,true);renderHero(deals.filter(d=>!expired(d)));render();renderCamps();
+    setStatus(lastCheck,true);renderHero(deals.filter(d=>!expired(d)));render();renderCamps();BFR.creditFrom(deals);
   }catch(e){
     if(!known){$("grid").textContent="";$("grid").appendChild(el("div","empty","العروض ما حمّلتش. اتأكد من النت وافتح الصفحة تاني."))}
     setStatus(null,false);
