@@ -196,7 +196,7 @@ footer.site{color:var(--muted);font-size:.82rem;max-width:75ch}
 .receipt{--paper:#FFFDF6;--rink:#221C38;--rmuted:#6E6782;
   position:relative;width:min(340px,100%);justify-self:end;background:var(--paper);color:var(--rink);
   font-family:"IBM Plex Mono","IBM Plex Sans Arabic",monospace;font-size:.82rem;line-height:1.7;
-  padding:30px 22px 34px;transform:rotate(1.8deg);transition:transform .35s ease;filter:drop-shadow(0 18px 24px rgb(0 0 0 / .22));
+  padding:24px 22px 28px;transform:rotate(1.8deg);transition:transform .35s ease;filter:drop-shadow(0 18px 24px rgb(0 0 0 / .22));
   -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50% 100%/14px 51% repeat-x,conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50% 0/14px 51% repeat-x;
           mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50% 100%/14px 51% repeat-x,conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50% 0/14px 51% repeat-x}
 .receipt:hover{transform:rotate(0) translateY(-4px)}

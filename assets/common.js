@@ -130,24 +130,10 @@
     info = info || {};
     host.textContent = "";
     const r = el("div", "receipt"); r.setAttribute("role", "group"); r.setAttribute("aria-label", "الموقع من تصميم وتنفيذ " + MAKER.ar);
-    const h = el("div", "rh"); h.appendChild(el("b", null, "رادار البلاك فرايدي"));
-    const sub = el("small", "num"); const inv = el("bdi", null, "#BF-2026"); inv.dir = "ltr";
-    sub.append("فاتورة رقم ", inv, " · " + dayLabel(new Date().toISOString())); h.appendChild(sub); r.appendChild(h);
-    r.appendChild(el("hr"));
-    const line = (k, v, nm) => { const l = el("div", "ln"); l.appendChild(el("span", "k", k)); l.appendChild(el("span", "fill")); l.appendChild(el("span", "v" + (nm ? " nm" : ""), v)); r.appendChild(l); };
-    line("الفكرة", MAKER.ar, true);
-    line("التصميم", MAKER.ar, true);
-    line("البرمجة", MAKER.ar, true);
-    line("عدد العروض", info.deals != null ? String(info.deals) : "—");
-    line("المتاجر", info.stores != null ? String(info.stores) : "—");
-    line("أكبر خصم", info.max ? info.max + "%" : "—");
-    r.appendChild(el("hr"));
-    const t = el("div", "total"); t.appendChild(el("span", null, "الإجمالي")); t.appendChild(el("b", "num", "0.00 ج.م")); r.appendChild(t);
     r.appendChild(el("p", "tnote", "الموقع ببلاش… والتوفير كله ليك"));
     r.appendChild(barcode(MAKER.en));
     r.appendChild(el("div", "spell", MAKER.en));
-    const th = el("div", "thanks"); th.appendChild(document.createTextNode("شكرًا لزيارتك ♥ ")); const a = el("a", null, MAKER.handle); a.href = MAKER.link; a.target = "_blank"; a.rel = "noopener"; th.appendChild(a); r.appendChild(th);
-    const s = el("div", "stamp"); s.setAttribute("aria-hidden", "true"); const sb = el("span"); sb.appendChild(el("b", null, "صُنع بإيد")); sb.appendChild(document.createTextNode(MAKER.ar)); s.appendChild(sb); r.appendChild(s);
+    const th = el("div", "thanks"); th.appendChild(document.createTextNode("شكرًا لزيارتك · ")); const a = el("a", null, MAKER.handle); a.href = MAKER.link; a.target = "_blank"; a.rel = "noopener"; th.appendChild(a); r.appendChild(th);
     host.appendChild(r);
   }
   function creditFrom(deals) {
