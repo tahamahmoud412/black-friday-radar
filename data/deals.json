@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-11-08T12:00:00+02:00",
+  "lastCheck": "2026-11-08T22:11:33+02:00",
   "campaigns": [
     {
       "id": "jumia-bf-2026",
@@ -42,9 +42,514 @@
       "start": "2026-11-20",
       "store": "نون",
       "url": "https://www.noon.com/egypt-ar/"
+    },
+    {
+      "id": "amazon-1111-2026",
+      "store": "أمازون مصر",
+      "name": "عروض 11.11",
+      "start": "2026-11-05",
+      "end": "2026-11-12",
+      "confirmed": true,
+      "note": "شغّالة دلوقتي على الموقع قبل الجمعة البيضاء.",
+      "url": "https://www.amazon.eg/events/double11"
+    },
+    {
+      "id": "noon-1111-2026",
+      "store": "نون",
+      "name": "عروض 11.11",
+      "start": "2026-11-07",
+      "end": "2026-11-12",
+      "confirmed": true,
+      "note": "شغّالة دلوقتي على الموقع، وعليها خصومات على الموبايلات واللابتوبات.",
+      "url": "https://www.noon.com/egypt-en/eg-11-11-singles-day-sale-offers/"
+    },
+    {
+      "id": "btech-bf-2026",
+      "store": "بي تك",
+      "name": "بلاك فرايدي",
+      "start": "2026-11-08",
+      "end": "2026-11-30",
+      "confirmed": false,
+      "note": "العروض شغّالة على الموقع، لسه ما أعلنوش آخر يوم. فيه تقسيط على معظم الأجهزة.",
+      "url": "https://btech.com/en/collection/black-friday-offers"
     }
   ],
   "deals": [
+    {
+      "id": "amazon-B0CJTYTWSZ",
+      "title": "مكنسة Dyson V15s Detect Submarine لاسلكية بالمسح المبلول",
+      "store": "أمازون مصر",
+      "category": "appliances",
+      "price": 39000,
+      "oldPrice": 45999,
+      "url": "https://www.amazon.eg/dp/B0CJTYTWSZ",
+      "image": "https://m.media-amazon.com/images/I/21rHS9cLemL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0F4JZNGT8",
+      "title": "مكنسة روبوت Xiaomi H40 بشفط 10000Pa ومسح",
+      "store": "أمازون مصر",
+      "category": "appliances",
+      "price": 15607.7,
+      "oldPrice": 16272.97,
+      "url": "https://www.amazon.eg/dp/B0F4JZNGT8",
+      "image": "https://m.media-amazon.com/images/I/31idRWPs68L._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0FX358M8X",
+      "title": "مكنسة عصا Tefal X-PERT 7.60 لاسلكية خفيفة",
+      "store": "أمازون مصر",
+      "category": "appliances",
+      "price": 7499,
+      "oldPrice": 8999,
+      "url": "https://www.amazon.eg/dp/B0FX358M8X",
+      "image": "https://m.media-amazon.com/images/I/417KXapPQZL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B09B9T8M2Y",
+      "title": "هاند بلندر Braun Multiquick 5 بكبة 1000 وات و21 سرعة",
+      "store": "أمازون مصر",
+      "category": "appliances",
+      "price": 5819.03,
+      "oldPrice": 6499,
+      "url": "https://www.amazon.eg/dp/B09B9T8M2Y",
+      "image": "https://m.media-amazon.com/images/I/31HNM99nSOL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B09DL769W9",
+      "title": "طقم حلل جرانيت Top Chef عشر قطع",
+      "store": "أمازون مصر",
+      "category": "home",
+      "price": 6254.64,
+      "oldPrice": 9224,
+      "url": "https://www.amazon.eg/dp/B09DL769W9",
+      "image": "https://m.media-amazon.com/images/I/41jJ3fxBdjL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0CKRYWD79",
+      "title": "كوتشي رجالي adidas Lite Racer 4.0",
+      "store": "أمازون مصر",
+      "category": "fashion",
+      "price": 2484,
+      "oldPrice": 4599,
+      "url": "https://www.amazon.eg/dp/B0CKRYWD79",
+      "image": "https://m.media-amazon.com/images/I/21eDuRWUMrL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0C3WGVL42",
+      "title": "كوتشي adidas Gamecourt Lite يونيسكس",
+      "store": "أمازون مصر",
+      "category": "fashion",
+      "price": 2810,
+      "oldPrice": 4999,
+      "url": "https://www.amazon.eg/dp/B0C3WGVL42",
+      "image": "https://m.media-amazon.com/images/I/31hml8Sx7bL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0CPDL1N1Q",
+      "title": "شنطة سفر كابينة BELMONT PLUS مقاس 55 سم بعجل دبل",
+      "store": "أمازون مصر",
+      "category": "other",
+      "price": 7995,
+      "oldPrice": 9995,
+      "url": "https://www.amazon.eg/dp/B0CPDL1N1Q",
+      "image": "https://m.media-amazon.com/images/I/41nD9xQRYBL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B01H9FE982",
+      "title": "برفان Hugo Boss The Scent for Her، أو دو برفان 100 مل",
+      "store": "أمازون مصر",
+      "category": "beauty",
+      "price": 3461,
+      "oldPrice": 4550.01,
+      "url": "https://www.amazon.eg/dp/B01H9FE982",
+      "image": "https://m.media-amazon.com/images/I/31BlEW6DtUL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0B7RQ46LD",
+      "title": "غسول CeraVe Blemish Control للبشرة الدهنية 236 مل",
+      "store": "أمازون مصر",
+      "category": "beauty",
+      "price": 494.39,
+      "oldPrice": 743.75,
+      "url": "https://www.amazon.eg/dp/B0B7RQ46LD",
+      "image": "https://m.media-amazon.com/images/I/41+jDget0iL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0B3F5G6RX",
+      "title": "شامبو Capixy Hair Fertilizer ضد التساقط 250 مل",
+      "store": "أمازون مصر",
+      "category": "beauty",
+      "price": 158.98,
+      "oldPrice": 315,
+      "url": "https://www.amazon.eg/dp/B0B3F5G6RX",
+      "image": "https://m.media-amazon.com/images/I/31Influ4oZL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0DRTPG4VN",
+      "title": "سكوتر أطفال Abo Elgoukh بتلات عجلات منوّرة وبيتطبق",
+      "store": "أمازون مصر",
+      "category": "baby",
+      "price": 880.48,
+      "oldPrice": 1558,
+      "url": "https://www.amazon.eg/dp/B0DRTPG4VN",
+      "image": "https://m.media-amazon.com/images/I/31Cx8d-ntyL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0DLTL8JCM",
+      "title": "جهاز ضغط Granzia Facilita ديجيتال",
+      "store": "أمازون مصر",
+      "category": "other",
+      "price": 838.5,
+      "oldPrice": 1290,
+      "url": "https://www.amazon.eg/dp/B0DLTL8JCM",
+      "image": "https://m.media-amazon.com/images/I/41sawk1D5cL._AC_SL500_.jpg",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "noon-N70133647V",
+      "title": "باور بانك Ugreen سعة 20000 مللي أمبير وشحن سريع 20 وات",
+      "store": "نون",
+      "category": "phones",
+      "price": 999,
+      "oldPrice": 1899,
+      "url": "https://www.noon.com/egypt-en/20000-mah-ugreen-20000mah-20w-two-way-fast-charging-power-bank-grey/N70133647V/p/",
+      "image": "https://f.nooncdn.com/p/pzsku/Z7649B4AB7D841D462C5EZ/45/1761032871/9a91e757-f210-408e-a91c-b157981c15c8.jpg?width=800",
+      "note": "عرض 11.11، أقل سعر في سنة",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "noon-N70047267V",
+      "title": "شاحن Ugreen GaN بقوة 65 وات وتلات مداخل",
+      "store": "نون",
+      "category": "phones",
+      "price": 949,
+      "oldPrice": 1899,
+      "url": "https://www.noon.com/egypt-en/65w-gan-fast-charger-3-port-usb-c-charger-2-type-c-and-1-usb-a-for-iphone-16-15-14-series-samsung-s23-s24-macbook-air-pixel-book-ipad-pro-more-black/N70047267V/p/",
+      "image": "https://f.nooncdn.com/p/pzsku/ZD302723B390BC5F90024Z/45/1761032785/880f7e97-d3a3-4e95-86e8-a203564fbd7f.jpg?width=800",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "noon-N53415951A",
+      "title": "باور بانك JOYROOM سعة 30000 مللي أمبير 22.5 وات",
+      "store": "نون",
+      "category": "phones",
+      "price": 1461,
+      "oldPrice": 1899,
+      "url": "https://www.noon.com/egypt-en/30000-mah-30000-mah-power-bank-22-5w-pd-qc3-0-afc-jr-qp193-black/N53415951A/p/",
+      "image": "https://f.nooncdn.com/p/pzsku/ZB4E1239F68F3694FA5BAZ/45/_/1779706004/7e40f5c1-9048-473a-9567-bdadd0ea0651.jpg?width=800",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "noon-N70221570V",
+      "title": "Honor X5c Plus ثنائي الشريحة 4G، 128 جيجا / 4 رام، أسود",
+      "store": "نون",
+      "category": "phones",
+      "price": 8737,
+      "oldPrice": 10999,
+      "url": "https://www.noon.com/egypt-en/x5c-plus-4g-dual-sim-4gb-ram-128gb-midnight-black-middle-east-version/N70221570V/p/",
+      "image": "https://f.nooncdn.com/p/pzsku/Z0C275286136C6D929183Z/45/_/1780572418/b5bdc570-136f-443f-8258-96a82adb1e00.jpg?width=800",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "noon-N70357053V",
+      "title": "Infinix Smart 20 ثنائي الشريحة، 128 جيجا / 8 رام (4+4)، أسود",
+      "store": "نون",
+      "category": "phones",
+      "price": 9737,
+      "oldPrice": 11399,
+      "url": "https://www.noon.com/egypt-en/smart-20-dual-sim-shadow-black-8gb-4-4-ram-128gb-4g-lte-middle-east-version/N70357053V/p/",
+      "image": "https://f.nooncdn.com/p/pzsku/Z729E7520951414CB94ABZ/45/_/1779722039/69451d2e-cfc0-4bc2-a7c6-267b8f460702.jpg?width=800",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "noon-N70275701V",
+      "title": "OPPO A6X ثنائي الشريحة، 64 جيجا / 4 رام، بنفسجي",
+      "store": "نون",
+      "category": "phones",
+      "price": 9650,
+      "oldPrice": 10500,
+      "url": "https://www.noon.com/egypt-en/a6x-dual-sim-plum-purple-4gb-ram-64gb-4g-middle-east-version/N70275701V/p/",
+      "image": "https://f.nooncdn.com/p/pzsku/ZF2D882BA41E4CCE575CDZ/45/_/1780306570/9fd5cf97-5966-4157-99e8-41818503591d.jpg?width=800",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "noon-N70247915V",
+      "title": "لابتوب ASUS TUF Gaming F16، Core i7-14650HX، رام 16، 1 تيرا SSD، RTX 5060",
+      "store": "نون",
+      "category": "electronics",
+      "price": 98149,
+      "oldPrice": 117600,
+      "url": "https://www.noon.com/egypt-en/fx608jmr-rv017w-asus-tuf-gaming-f16-laptop-with-16-inch-fhd-i7-processor-14650hx-16-gb-ram-1-tera-ssd-nvidia-geforce-rtx-5060-laptop-gpu-english-win11-jaeger-gray-english-jaeger-gray/N70247915V/p/",
+      "image": "https://f.nooncdn.com/p/pzsku/ZA0BB5BB639BE69846E57Z/45/_/1779791667/304b79a7-e612-4e21-ad79-b9964324d6f7.jpg?width=800",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "noon-N70305950V",
+      "title": "Apple MacBook Neo شاشة 13 بوصة، A18 Pro، رام 8، 512 جيجا",
+      "store": "نون",
+      "category": "electronics",
+      "price": 49000,
+      "oldPrice": 55000,
+      "url": "https://www.noon.com/egypt-en/macbook-neo-13-inch-display-a18-pro-6-core-cpu-5-core-gpu-16-core-neural-engine-processor-8gb-ram-512gb-ssd-english-keyboard-international-version-blush/N70305950V/p/",
+      "image": "https://f.nooncdn.com/p/pzsku/Z317A4A3ED9B1E86652EFZ/45/_/1779094469/44e91887-9d19-4924-99c2-44f762b0f38a.jpg?width=800",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "noon-N70298766V",
+      "title": "Apple MacBook Air M5 شاشة 13 بوصة، رام 16، 512 جيجا (2026)",
+      "store": "نون",
+      "category": "electronics",
+      "price": 80360,
+      "oldPrice": 87999,
+      "url": "https://www.noon.com/egypt-en/new-2026-macbook-air-mdh74-13-inch-display-m5-air-10-core-cpu-8-core-gpu-16gb-ram-512gb-ssd-macos-english-keyboard-international-version-silver/N70298766V/p/",
+      "image": "https://f.nooncdn.com/p/pzsku/ZF405A1F74664C59D8793Z/45/_/1779094756/e3a0857b-2aa9-4101-819f-ef3fd004642c.jpg?width=800",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "noon-N70383787V",
+      "title": "لابتوب MSI Thin 15 للجيمنج، Core i7-13620H، رام 16، RTX 3050",
+      "store": "نون",
+      "category": "electronics",
+      "price": 49430,
+      "oldPrice": 53600,
+      "url": "https://www.noon.com/egypt-en/msi-thin-15-b13uc-gaming-laptop-intel-core-i7-13620h-16gb-ram-512gb-ssd-nvidia-geforce-rtx-3050-4gb-15-6-fhd-dos-gray-grey/N70383787V/p/",
+      "image": "https://f.nooncdn.com/p/pzsku/ZD6A1831E74F64D954344Z/45/_/1782647981/d92284cb-157c-4fd1-bb4a-5355eb1efa70.jpg?width=800",
+      "note": "عرض 11.11",
+      "endsAt": "2026-11-12",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "btech-ps5-slim-1tb",
+      "title": "Sony PlayStation 5 Slim سعة 1 تيرا بدراع DualSense، أبيض",
+      "store": "بي تك",
+      "category": "electronics",
+      "price": 42960,
+      "oldPrice": 44200,
+      "url": "https://btech.com/en/p/sony-playstation-5-slim-1tb-ssd-with-dualsense-wireless-controller-white",
+      "image": "https://media.btech.com/catalogs/f/9/b/f/f9bf259a0e859de3aee08c95de622935ed8067e8_5675867.jpg",
+      "note": "تقسيط من 2,482 ج.م في الشهر",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "btech-s26-ultra-256",
+      "title": "Samsung Galaxy S26 Ultra، 256 جيجا / 12 رام، 5G، أسود",
+      "store": "بي تك",
+      "category": "phones",
+      "price": 71200,
+      "oldPrice": 73500,
+      "url": "https://btech.com/en/p/36596e8f-869f-4b90-a36f-b9af314bbcb0",
+      "image": "https://media.btech.com/catalogs/9/e/a/3/9ea31f29d5a84afea04f004678779f3f34cb41a4_imgi_20_S26_ultra_black4_eg4s_qa.jpg",
+      "note": "تقسيط من 4,114 ج.م في الشهر",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "btech-airpods-4",
+      "title": "سماعة Apple AirPods 4، أبيض",
+      "store": "بي تك",
+      "category": "electronics",
+      "price": 6599,
+      "oldPrice": 7499,
+      "url": "https://btech.com/en/p/apple-airpods-4-white",
+      "image": "https://media.btech.com/catalogs/4/7/6/5/4765187c0ea5fa7776f379a90e6bdbf8269d1c97_AirPods_4_PDP_Image_Position_2__en_ME.jpg",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "btech-xiaomi-a27i",
+      "title": "شاشة Xiaomi A27i مقاس 27 بوصة FHD بتردد 100 هرتز",
+      "store": "بي تك",
+      "category": "electronics",
+      "price": 6289,
+      "oldPrice": 6499,
+      "url": "https://btech.com/en/p/bd6bb1af-2712-4792-b3a2-0366bc6bed04",
+      "image": "https://media.btech.com/catalogs/7/e/8/d/7e8d0a489cb4ee417659267dfca3e78ef7ca673d_Xiaomi_27_A27i_FHD_LED_Monitor_IPS_Display_100Hz_Refresh_Rate___Black_800x__Original_Size_.jpg",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "btech-fresh-relax-50",
+      "title": "سخان كهربا Fresh Relax LED سعة 50 لتر، أبيض",
+      "store": "بي تك",
+      "category": "appliances",
+      "price": 3799,
+      "oldPrice": 4199,
+      "url": "https://btech.com/en/p/fresh-relax-led-50-vf-electric-water-heater-50-liter-white-500018807",
+      "image": "https://media.btech.com/catalogs/4/b/f/9/4bf94676be1669c6dccd726d5d9bb468f3033eae_jelho4h3vyicrn18hmpm_ep3tgqojdikssbjv.jpg",
+      "note": "خصم 300 ج.م زيادة عند الدفع",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "btech-rush-brush-x5",
+      "title": "مكواة شعر Rush Brush X5 بالبخار لحد 235 درجة",
+      "store": "بي تك",
+      "category": "beauty",
+      "price": 2999,
+      "oldPrice": 3299,
+      "url": "https://btech.com/en/p/rush-brush-steam-hair-straightener-235-degree-x5",
+      "image": "https://media.btech.com/catalogs/e/e/3/f/ee3f6aa8efbde19dfb2a814e6bab3c5647ba52be_5452c8d468f408a07574f6b4b7a99996435693319d6ce597f4cab3677444ccde.jpeg",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "2b-ipad-a16-128",
+      "title": "Apple iPad A16 الجيل 11، واي فاي، 128 جيجا، فضي",
+      "store": "2B",
+      "category": "electronics",
+      "price": 26999,
+      "oldPrice": 46399,
+      "url": "https://2b.com.eg/en/apple-ipad-a16-11-generation-wi-fi-6gb-ram-128gb-silver.html",
+      "image": "https://2b.com.eg/media/catalog/product/cache/95ecb2bb37dc4b4cf06b3a61c1c15c3b/a/p/apple-ipad-silver-11th_-_copy.jpg",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "2b-galaxy-a17-256",
+      "title": "Samsung Galaxy A17 5G، 256 جيجا / 8 رام، أسود",
+      "store": "2B",
+      "category": "phones",
+      "price": 18599,
+      "oldPrice": 27899,
+      "url": "https://2b.com.eg/en/samsung-galaxy-a17-5g-8gb-ram-256gb-black.html",
+      "image": "https://2b.com.eg/media/catalog/product/cache/95ecb2bb37dc4b4cf06b3a61c1c15c3b/s/a/samsung-galaxy-a17---black_2.jpg",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "2b-honor-x9d",
+      "title": "Honor X9d 5G، 256 جيجا / 12 رام",
+      "store": "2B",
+      "category": "phones",
+      "price": 23499,
+      "oldPrice": 36199,
+      "url": "https://2b.com.eg/en/honor-x9d-5g-12gb-ram-256gb-reddish-brown.html",
+      "image": "https://2b.com.eg/media/catalog/product/cache/95ecb2bb37dc4b4cf06b3a61c1c15c3b/h/o/honor-x9d-brown.13.jpg",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "2b-samsung-u8000h-50",
+      "title": "شاشة Samsung U8000H مقاس 50 بوصة 4K سمارت برسيفر داخلي",
+      "store": "2B",
+      "category": "electronics",
+      "price": 18499,
+      "oldPrice": 27449,
+      "url": "https://2b.com.eg/en/samsung-u8000h-tv-50-inch-4k-uhd-smart-led-built-in-receiver-ua50u8000h.html",
+      "image": "https://2b.com.eg/media/catalog/product/cache/95ecb2bb37dc4b4cf06b3a61c1c15c3b/t/v/tv227_1_1.jpg",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "2b-fresh-washer-9kg",
+      "title": "غسالة Fresh فول أوتوماتيك 9 كيلو إنفرتر دايركت درايف، أسود",
+      "store": "2B",
+      "category": "appliances",
+      "price": 18499,
+      "oldPrice": 31249,
+      "url": "https://2b.com.eg/en/fresh-washing-machine-9-kgs-inverter-front-loading-full-automatic-direct-drive-black-g12152.html",
+      "image": "https://2b.com.eg/media/catalog/product/cache/95ecb2bb37dc4b4cf06b3a61c1c15c3b/h/f/hf532.jpg",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "2b-hp-240-g9-i5",
+      "title": "لابتوب HP 240 G9، Core i5-1235U، رام 8، 512 جيجا SSD",
+      "store": "2B",
+      "category": "electronics",
+      "price": 28999,
+      "oldPrice": 45449,
+      "url": "https://2b.com.eg/en/hp-240g9-laptop-intelr-coretm-i5-1235u-8gb-512gb-ssd-intelr-irisr-xe-graphics-14-hd-black.html",
+      "image": "https://2b.com.eg/media/catalog/product/cache/95ecb2bb37dc4b4cf06b3a61c1c15c3b/z/h/zh690-1.jpg",
+      "addedAt": "2026-11-08T22:11:33+02:00",
+      "source": "auto"
+    },
     {
       "id": "jumia-133964763",
       "addedAt": "2026-11-08T11:30:00+02:00",
@@ -55,7 +560,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "كوتشي ADIDAS Barreda",
-      "url": "https://www.jumia.com.eg/adidas-barreda-shoes-133964763.html"
+      "url": "https://www.jumia.com.eg/adidas-barreda-shoes-133964763.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/36/7469331/1.jpg?1819"
     },
     {
       "id": "jumia-134680590",
@@ -69,7 +575,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "كوتشي جري ADIDAS Duramo RC2",
-      "url": "https://www.jumia.com.eg/adidas-duramo-rc2-running-shoes-134680590.html"
+      "url": "https://www.jumia.com.eg/adidas-duramo-rc2-running-shoes-134680590.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/09/5086431/1.jpg?5249"
     },
     {
       "id": "jumia-133838242",
@@ -81,7 +588,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "فستان ميدي حريمي Defacto بياقة هالتر",
-      "url": "https://www.jumia.com.eg/defacto-woman-bodycon-halter-collar-camisole-midi-dress.-133838242.html"
+      "url": "https://www.jumia.com.eg/defacto-woman-bodycon-halter-collar-camisole-midi-dress.-133838242.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/24/2838331/1.jpg?5816"
     },
     {
       "id": "jumia-135025022",
@@ -94,7 +602,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "كوتشي Activ أسود مخرّم برباط، يونيسكس",
-      "url": "https://www.jumia.com.eg/activ-black-perforated-lace-up-unisext-sneaker-135025022.html"
+      "url": "https://www.jumia.com.eg/activ-black-perforated-lace-up-unisext-sneaker-135025022.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/22/0520531/1.jpg?2940"
     },
     {
       "id": "jumia-135087620",
@@ -107,7 +616,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "كوتشي حريمي Freska تريكو مريح، لبني",
-      "url": "https://www.jumia.com.eg/freska-womens-knitted-comfort-sneakers-light-blue-135087620.html"
+      "url": "https://www.jumia.com.eg/freska-womens-knitted-comfort-sneakers-light-blue-135087620.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/02/6780531/1.jpg?4784"
     },
     {
       "id": "jumia-133633379",
@@ -119,7 +629,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "قلاية هوائية Arion ديجيتال XL 10 لتر، 1900 وات",
-      "url": "https://www.jumia.com.eg/arion-digital-air-fryer-xl-10l-1900w-high-power-multi-function-model-ar-9500afdw-133633379.html"
+      "url": "https://www.jumia.com.eg/arion-digital-air-fryer-xl-10l-1900w-high-power-multi-function-model-ar-9500afdw-133633379.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/97/3336331/1.jpg?0885"
     },
     {
       "id": "jumia-14155091",
@@ -131,7 +642,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "كاتل Hoho ستانلس 1.5 لتر",
-      "url": "https://www.jumia.com.eg/hoho-stainless-steel-electric-kettle-1.5l-silver-14155091.html"
+      "url": "https://www.jumia.com.eg/hoho-stainless-steel-electric-kettle-1.5l-silver-14155091.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/19/055141/1.jpg?8182"
     },
     {
       "id": "jumia-24675980",
@@ -143,7 +655,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "مسحوق غسيل أوتوماتيك Oxi سبرينج بريز 9 كيلو (8+1)",
-      "url": "https://www.jumia.com.eg/oxi-automatic-powder-detergent-81kg-spring-breeze-9kg-24675980.html"
+      "url": "https://www.jumia.com.eg/oxi-automatic-powder-detergent-81kg-spring-breeze-9kg-24675980.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/08/957642/1.jpg?7268"
     },
     {
       "id": "jumia-128950095",
@@ -155,7 +668,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "تلاجة Unionaire DASH ديفروست 310 لتر، فضي",
-      "url": "https://www.jumia.com.eg/unionaire-rd-320vva-dash-310l-defrost-refrigerator-2-doors-silver-128950095.html"
+      "url": "https://www.jumia.com.eg/unionaire-rd-320vva-dash-310l-defrost-refrigerator-2-doors-silver-128950095.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/59/0059821/1.jpg?4693"
     },
     {
       "id": "jumia-133633376",
@@ -167,7 +681,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "مكواة بخار Arion سيراميك 3000 وات (AR-606)",
-      "url": "https://www.jumia.com.eg/arion-ceramic-steam-iron-3000w-ar-606-133633376.html"
+      "url": "https://www.jumia.com.eg/arion-ceramic-steam-iron-3000w-ar-606-133633376.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/67/3336331/1.jpg?8088"
     },
     {
       "id": "jumia-mpg3927715",
@@ -179,7 +694,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "شاشة Samsung سمارت 32 بوصة Full HD برسيفر داخلي (موديل 2025)",
-      "url": "https://www.jumia.com.eg/32-inch-full-hd-smart-led-tv-with-built-in-receiver-black-ua32h5000fuxeg-2025-model-samsung-mpg3927715.html"
+      "url": "https://www.jumia.com.eg/32-inch-full-hd-smart-led-tv-with-built-in-receiver-black-ua32h5000fuxeg-2025-model-samsung-mpg3927715.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/00/9969231/1.jpg?5024"
     },
     {
       "id": "jumia-134798431",
@@ -193,7 +709,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "كوتشي جري ADIDAS Galaxy 7، رمادي",
-      "url": "https://www.jumia.com.eg/adidas-galaxy-7-running-shoes-grey-134798431.html"
+      "url": "https://www.jumia.com.eg/adidas-galaxy-7-running-shoes-grey-134798431.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/13/4897431/1.jpg?8404"
     },
     {
       "id": "jumia-39254253",
@@ -205,7 +722,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "بامبرز Molfix بانتس ميجا باك مقاس 6، 60 قطعة",
-      "url": "https://www.jumia.com.eg/molfix-diapers-pants-mega-pack-xlarge-size-6-60-pieces-39254253.html"
+      "url": "https://www.jumia.com.eg/molfix-diapers-pants-mega-pack-xlarge-size-6-60-pieces-39254253.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/35/245293/1.jpg?0380"
     },
     {
       "id": "jumia-96954845",
@@ -217,7 +735,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "طقم طاسات جرانيت Lazord، 3 قطع (18 - 22 - 26 سم)",
-      "url": "https://www.jumia.com.eg/lazord-granite-frying-pan-set-3-piece-18-22-26-cm-purple-96954845.html"
+      "url": "https://www.jumia.com.eg/lazord-granite-frying-pan-set-3-piece-18-22-26-cm-purple-96954845.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/54/845969/1.jpg?1510"
     },
     {
       "id": "jumia-134012052",
@@ -229,7 +748,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "بوتاجاز Zanussi Cool Max ستانلس 90 سم بمروحة تبريد وتايمر ديجيتال (ZCG94396XB)",
-      "url": "https://www.jumia.com.eg/zanussi-free-standing-cooker-90-cool-max-new-edition-hot-cooling-fan-digital-timer-cast-iron-pan-support-full-safety-brushed-stainless-steel-zcg94396xb-134012052.html"
+      "url": "https://www.jumia.com.eg/zanussi-free-standing-cooker-90-cool-max-new-edition-hot-cooling-fan-digital-timer-cast-iron-pan-support-full-safety-brushed-stainless-steel-zcg94396xb-134012052.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/25/0210431/1.jpg?5762"
     },
     {
       "id": "jumia-135104005",
@@ -241,7 +761,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "Honor Play20A ثنائي الشريحة 4G، 64 جيجا / 4 رام، لبني",
-      "url": "https://www.jumia.com.eg/honor-play20a-dual-sim-64gb4gb-4g-mobile-phone-light-blue-135104005.html"
+      "url": "https://www.jumia.com.eg/honor-play20a-dual-sim-64gb4gb-4g-mobile-phone-light-blue-135104005.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/50/0401531/1.jpg?4122"
     },
     {
       "id": "jumia-39495191",
@@ -253,7 +774,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "شاور جل Rivoli بالورد، 3 لتر",
-      "url": "https://www.jumia.com.eg/rivoli-rose-shower-gel-3-l-39495191.html"
+      "url": "https://www.jumia.com.eg/rivoli-rose-shower-gel-3-l-39495191.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/19/159493/1.jpg?1450"
     },
     {
       "id": "jumia-133885513",
@@ -265,7 +787,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "Honor X5c Plus ثنائي الشريحة 4G، 128 جيجا / 4 رام، أسود",
-      "url": "https://www.jumia.com.eg/honor-x5c-plus-dual-sim-4g-128gb4gb-midnight-black-133885513.html"
+      "url": "https://www.jumia.com.eg/honor-x5c-plus-dual-sim-4g-128gb4gb-midnight-black-133885513.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/31/5588331/1.jpg?4225"
     },
     {
       "id": "jumia-134587356",
@@ -277,7 +800,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "غسالة Argosta فول أوتوماتيك 6 كيلو 1000 لفة، صناعة تركي",
-      "url": "https://www.jumia.com.eg/argosta-front-load-washing-machine-6kg-1000-rpm-made-in-turkey-134587356.html"
+      "url": "https://www.jumia.com.eg/argosta-front-load-washing-machine-6kg-1000-rpm-made-in-turkey-134587356.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/65/3785431/1.jpg?5302"
     },
     {
       "id": "jumia-25119153",
@@ -289,7 +813,8 @@
       "source": "auto",
       "store": "جوميا",
       "title": "سخان كهربا Olympic Hero 50 لتر، 1500 وات",
-      "url": "https://www.jumia.com.eg/olympic-oye05061wn-olympic-electric-water-heater-mechanical-with-knob-hero-50.-1500-watt-25119153.html"
+      "url": "https://www.jumia.com.eg/olympic-oye05061wn-olympic-electric-water-heater-mechanical-with-knob-hero-50.-1500-watt-25119153.html",
+      "image": "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/35/191152/1.jpg?0089"
     }
   ]
 }

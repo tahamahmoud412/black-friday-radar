@@ -33,6 +33,10 @@ for (const [i, d] of (data.deals || []).entries()) {
   if (d.oldPrice != null && (typeof d.oldPrice !== "number" || d.oldPrice <= 0)) errors.push(`${at}: oldPrice must be a positive number`);
   try { const u = new URL(d.url); if (u.protocol !== "https:") errors.push(`${at}: url must be https`); }
   catch { errors.push(`${at}: bad url`); }
+  if (d.image != null) {
+    try { if (new URL(d.image).protocol !== "https:") errors.push(`${at}: image must be https`); }
+    catch { errors.push(`${at}: bad image url`); }
+  }
   if (urls.has(d.url)) errors.push(`${at}: duplicate url`);
   urls.add(d.url);
   if (isNaN(Date.parse(d.addedAt))) errors.push(`${at}: addedAt is not a date`);
