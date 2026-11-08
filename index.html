@@ -225,15 +225,16 @@ function go(p){st.page=p;save();render();$("gridTop").scrollIntoView()}
 function renderPager(pages){
   const nav=$("pager");nav.textContent="";
   if(pages<=1)return;
-  const btn=(label,p,opts={})=>{const b=el("button",null,label);b.type="button";if(opts.cur)b.setAttribute("aria-current","page");if(opts.dis)b.disabled=true;if(opts.aria)b.setAttribute("aria-label",opts.aria);b.onclick=()=>go(p);nav.appendChild(b)};
-  btn("→ السابق",st.page-1,{dis:st.page===1,aria:"الصفحة السابقة"});
+  const btn=(label,p,opts={})=>{const b=el("button");b.type="button";
+    if(opts.arrow){const t=el("span","txt",label);if(opts.arrow==="prev"){b.append("→ ",t)}else{b.append(t," ←")}}else b.textContent=label;if(opts.cur)b.setAttribute("aria-current","page");if(opts.dis)b.disabled=true;if(opts.aria)b.setAttribute("aria-label",opts.aria);b.onclick=()=>go(p);nav.appendChild(b)};
+  btn("السابق",st.page-1,{dis:st.page===1,aria:"الصفحة السابقة",arrow:"prev"});
   const set=new Set([1,pages,st.page-1,st.page,st.page+1].filter(p=>p>=1&&p<=pages));
   let prev=0;
   for(const p of [...set].sort((a,b)=>a-b)){
     if(p-prev>1)nav.appendChild(el("span","gap","…"));
     btn(String(p),p,{cur:p===st.page,aria:"صفحة "+p});prev=p;
   }
-  btn("التالي ←",st.page+1,{dis:st.page===pages,aria:"الصفحة التالية"});
+  btn("التالي",st.page+1,{dis:st.page===pages,aria:"الصفحة التالية",arrow:"next"});
 }
 
 /* data */

@@ -94,6 +94,17 @@ function renderProduct(d,all){
   acts.appendChild(share);box.appendChild(acts);
   panel.appendChild(box);
 
+  // phones: a buy bar sticks to the bottom once the main buy button scrolls out of view
+  if(u&&!expired(d)){
+    const bar=el("div","buybar");bar.setAttribute("aria-hidden","true");
+    const pp=el("div","p num");pp.appendChild(el("b",null,fmt(d.price)+" ج.م"));if(d.oldPrice>d.price)pp.appendChild(el("small",null,fmt(d.oldPrice)+" ج.م"));
+    bar.appendChild(pp);
+    const bb=el("a","btn btn-hot","اشتري من "+d.store+" ←");bb.href=u;bb.target="_blank";bb.rel="noopener nofollow";bb.tabIndex=-1;bar.appendChild(bb);
+    document.body.appendChild(bar);document.body.classList.add("has-buybar");
+    const main=acts.querySelector(".btn-hot");
+    if("IntersectionObserver" in window&&main)new IntersectionObserver(([e])=>bar.classList.toggle("show",!e.isIntersecting&&e.boundingClientRect.top<0)).observe(main);
+  }
+
   if(d.note){const n=el("div","notebox");n.appendChild(el("strong",null,"ملاحظة: "));n.appendChild(document.createTextNode(d.note));panel.appendChild(n)}
 
   const facts=el("dl","facts");
