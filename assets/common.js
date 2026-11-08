@@ -81,7 +81,7 @@
   function setStatus(lastCheck, ok) {
     const t = document.getElementById("statusText"), dot = document.getElementById("dot");
     if (!t) return;
-    if (ok) { t.textContent = lastCheck ? "بيتحدث لوحده · آخر تحديث " + ago(lastCheck) : "بيتحدث لوحده"; dot.className = "dot live"; }
+    if (ok) { t.textContent = lastCheck ? "آخر تحديث " + ago(lastCheck) : ""; dot.className = "dot live"; }
     else { t.textContent = "مش قادر يجيب آخر تحديث دلوقتي"; dot.className = "dot"; }
   }
 
