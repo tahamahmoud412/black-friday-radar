@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>كل الكوبونات | تمنه كام؟</title>
+<meta name="description" content="كل كوبونات وأكواد خصم البلاك فرايدي في مصر من نون وأمازون وجوميا وغيرهم، بزرار نسخ للكود والشروط ولحد إمتى شغّال.">
+<meta name="author" content="طه محمود (Taha Mahmoud)">
+<meta name="theme-color" content="#120E1F">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg?v=9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Lalezar&family=Reem+Kufi:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=9">
+</head>
+<body>
+<header class="topbar">
+  <div class="in">
+    <a class="logo" href="./"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-12 20 20)"><path d="M15 5h19a3 3 0 0 1 3 3v24a3 3 0 0 1-3 3H15L3.5 20z" fill="var(--tag)" stroke="var(--tag-ink)" stroke-width="2" stroke-linejoin="round"/><circle cx="11" cy="20" r="2.3" fill="var(--tag-ink)"/><g transform="translate(48 0) scale(-1 1)" fill="none" stroke="var(--tag-ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20.3 14.6a4 4 0 1 1 6.2 3.6c-1.6.9-2.5 1.8-2.5 3.6v.6"/><circle cx="24" cy="27" r=".4" stroke-width="3.4"/></g></g></svg><span>تمنه <b>كام؟</b></span></a>
+    <div class="status"><span class="dot" id="dot"></span><span id="statusText">بيحمّل…</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="crumbs" aria-label="مكانك في الموقع"><a href="./">الرئيسية</a><span>/</span><span>الكوبونات</span></nav>
+
+  <section style="display:grid;gap:14px" aria-labelledby="pageH">
+    <div class="head"><h1 id="pageH" class="pageh">كل الكوبونات وأكواد الخصم</h1><span id="coupNote"></span></div>
+    <p class="dnote" style="margin:0">انسخ الكود واكتبه في صفحة الدفع عند المتجر. الكوبونات اللي «من غير كود» بتتطبق لوحدها أو لما تدفع بالكارت المكتوب.</p>
+    <div class="coupchips" id="coupChips"></div>
+    <div class="coupons" id="coupons"><div class="empty">بيحمّل الكوبونات…</div></div>
+  </section>
+
+  <footer class="site-foot">
+    <div class="disclaimer">
+      <strong>تمنه كام؟</strong>
+      <p style="margin:0">الأسعار بتتغير بسرعة في موسم الخصومات، والكوبونات بتخلص أو بتتغير شروطها، فاتأكد من الكود في صفحة المتجر قبل ما تدفع.</p>
+      <p style="margin:0">الموقع مش تابع لأي متجر.</p>
+    </div>
+    <div id="credit"></div>
+  </footer>
+</main>
+
+<script src="assets/common.js?v=9"></script>
+<script>
+(function(){
+const {expired,el,loadData,setStatus,mixCoupons,couponCard}=BFR;
+const $=id=>document.getElementById(id);
+let coupons=[],store="all";
+try{store=new URLSearchParams(location.search).get("store")||"all"}catch(e){}
+
+function render(){
+  const live=mixCoupons(coupons.filter(c=>!expired(c)));
+  $("coupNote").textContent=live.length?live.length+" كوبون شغّال":"";
+  const stores=[...new Set(live.map(c=>c.store))].sort();
+  if(store!=="all"&&!stores.includes(store))store="all";
+  const ch=$("coupChips");ch.textContent="";ch.hidden=stores.length<2;
+  [["all","الكل"],...stores.map(s=>[s,s])].forEach(([v,label])=>{
+    const n=v==="all"?live.length:live.filter(c=>c.store===v).length;
+    const b=el("button","chip",label+" ("+n+")");b.type="button";b.setAttribute("aria-pressed",String(store===v));
+    b.onclick=()=>{store=v;render()};ch.appendChild(b);
+  });
+  const box=$("coupons");box.textContent="";
+  const list=live.filter(c=>store==="all"||c.store===store);
+  if(!list.length)box.appendChild(el("div","empty","لسه مفيش كوبونات شغّالة. أول ما كوبون ينزل هيظهر هنا."));
+  for(const c of list)box.appendChild(couponCard(c));
+}
+async function load(){
+  try{const j=await loadData();coupons=j.coupons;setStatus(j.lastCheck,true);render();BFR.creditFrom(j.deals)}
+  catch(e){if(!coupons.length){$("coupons").textContent="";$("coupons").appendChild(el("div","empty","الكوبونات ما حمّلتش. اتأكد من النت وافتح الصفحة تاني."))}setStatus(null,false)}
+}
+load();
+setInterval(load,5*60000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
+})();
+</script>
+</body>
+</html>

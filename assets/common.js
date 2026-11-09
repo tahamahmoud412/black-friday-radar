@@ -107,6 +107,72 @@
       .map(x => x.d);
   }
 
+  // ---------- coupons ----------
+  async function copyText(t) {
+    try { await navigator.clipboard.writeText(t); return true; } catch (e) {}
+    const x = document.createElement("textarea"); x.value = t; x.setAttribute("readonly", ""); x.style.position = "fixed"; x.style.opacity = "0";
+    document.body.appendChild(x); x.select();
+    let ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+    x.remove(); return ok;
+  }
+  // Codes before no-code offers, newest first, then take turns between stores so one store doesn't fill the top.
+  function mixCoupons(list) {
+    const order = { code: 0, bank: 1, auto: 2 };
+    const sorted = list.slice().sort((a, b) => (order[a.kind] ?? 3) - (order[b.kind] ?? 3) || (b.addedAt || "").localeCompare(a.addedAt || ""));
+    const groups = new Map();
+    for (const c of sorted) { const k = c.kind + "|" + c.store; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(c); }
+    const out = [];
+    for (const kind of ["code", "bank", "auto"]) {
+      const qs = [...groups].filter(([k]) => k.startsWith(kind + "|")).map(([, v]) => v.slice());
+      while (qs.some(q => q.length)) for (const q of qs) if (q.length) out.push(q.shift());
+    }
+    return out;
+  }
+  function copyButton(code, label, cls) {
+    const btn = el("button", cls); btn.type = "button"; btn.setAttribute("aria-label", "انسخ الكود " + code);
+    const idle = () => { btn.textContent = label; };
+    idle();
+    btn.onclick = async e => {
+      e.preventDefault(); e.stopPropagation();
+      const ok = await copyText(code);
+      btn.textContent = ok ? "اتنسخ ✓" : "انسخه بإيدك"; btn.classList.toggle("done", ok);
+      setTimeout(() => { btn.classList.remove("done"); idle(); }, 1800);
+    };
+    return btn;
+  }
+  // Small ticket for the home page strip: badge, store + what you get, and the code (tap to copy).
+  function couponMini(c) {
+    const k = el("article", "coupon mini");
+    k.appendChild(el("div", "off num", c.off)).dir = "auto";
+    const b = el("div", "body");
+    const t = el("p", "line"); t.appendChild(el("b", null, c.store + " · ")); t.appendChild(document.createTextNode(c.title)); t.title = c.title; b.appendChild(t);
+    if (c.kind === "code") {
+      const row = el("div", "code");
+      row.appendChild(el("b", null, c.code));
+      row.appendChild(copyButton(c.code, "انسخ"));
+      b.appendChild(row);
+    } else b.appendChild(el("span", "nocode", c.kind === "bank" ? "من غير كود · بالكارت" : "من غير كود"));
+    k.appendChild(b);
+    return k;
+  }
+  // Full ticket for the coupons page: badge, title, code + copy, terms and a link to the store's page.
+  function couponCard(c) {
+    const k = el("article", "coupon");
+    const off = el("div", "off"); off.appendChild(el("span", "num", c.off)).dir = "auto"; off.appendChild(el("small", null, c.kind === "bank" ? "بالكارت" : "خصم")); k.appendChild(off);
+    const b = el("div", "body");
+    const m = el("div", "meta"); m.appendChild(el("span", "store", c.store)); if (isNew(c)) m.appendChild(el("span", "new", "● جديد")); b.appendChild(m);
+    b.appendChild(el("h3", null, c.title));
+    if (c.kind === "code") {
+      const row = el("div", "code"); row.appendChild(el("b", null, c.code)); row.appendChild(copyButton(c.code, "انسخ الكود")); b.appendChild(row);
+    } else b.appendChild(el("span", "nocode", c.kind === "bank" ? "من غير كود · الخصم بيتطبق لما تدفع بالكارت" : "من غير كود · الخصم بيتطبق لوحده"));
+    const t = []; if (c.minOrder) t.push("أقل طلب " + fmt(c.minOrder) + " ج.م"); if (c.maxOff) t.push("أقصى خصم " + fmt(c.maxOff) + " ج.م"); if (c.endsAt) t.push("لحد " + dayLabel(c.endsAt)); if (c.note) t.push(c.note);
+    if (t.length) b.appendChild(el("p", "terms num", t.join(" · ")));
+    const u = safeUrl(c.url);
+    if (u) { const s = el("div", "src"); const a = el("a", null, "شوف الشروط عند " + c.store + " ←"); a.href = u; a.target = "_blank"; a.rel = "noopener nofollow"; s.appendChild(a); b.appendChild(s); }
+    k.appendChild(b);
+    return k;
+  }
+
   // Footer credit: a shop receipt signed by the site's maker. The barcode is drawn from the letters of the name.
   const MAKER = { ar: "طه محمود", en: "TAHA MAHMOUD", link: "https://github.com/tahamahmoud412", handle: "@tahamahmoud412" };
   function barcode(text) {
@@ -142,5 +208,5 @@
     credit({ deals: live.length, stores: new Set(live.map(d => d.store)).size, max: live.length ? Math.max(...live.map(disc)) : 0 });
   }
 
-  window.BFR = { credit, creditFrom, CATS, DAY, BF, fmt, disc, saving, isNew, expired, dayLabel, ago, safeUrl, el, productUrl, picture, discountTag, card, loadData, setStatus, recommend };
+  window.BFR = { copyText, mixCoupons, couponMini, couponCard, credit, creditFrom, CATS, DAY, BF, fmt, disc, saving, isNew, expired, dayLabel, ago, safeUrl, el, productUrl, picture, discountTag, card, loadData, setStatus, recommend };
 })();

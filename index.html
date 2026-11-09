@@ -10,11 +10,11 @@
 <meta property="og:type" content="website">
 <meta name="author" content="طه محمود (Taha Mahmoud)">
 <meta name="theme-color" content="#120E1F">
-<link rel="icon" type="image/svg+xml" href="assets/logo.svg?v=8">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg?v=9">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Lalezar&family=Reem+Kufi:wght@600;700&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=8">
+<link rel="stylesheet" href="assets/style.css?v=9">
 </head>
 <body>
 <header class="topbar">
@@ -67,11 +67,9 @@
     <div class="camps" id="camps"></div>
   </section>
 
-  <section aria-labelledby="coupH" id="coupWrap" style="display:grid;gap:12px;scroll-margin-top:80px" hidden>
-    <div class="head"><h2 id="coupH">كوبونات وأكواد خصم</h2><span id="coupNote"></span></div>
-    <div class="coupchips" id="coupChips"></div>
-    <div class="coupons" id="coupons"></div>
-    <button class="btn btn-tag coupmore" type="button" id="coupMore" hidden></button>
+  <section aria-labelledby="coupH" id="coupWrap" class="coupstrip" hidden>
+    <div class="head"><h2 id="coupH">كوبونات وأكواد خصم</h2><a class="seeall" id="coupAll" href="coupons.html">كل الكوبونات ←</a></div>
+    <div class="coupons mini" id="coupons"></div>
   </section>
 
   <section class="bar" aria-label="فلترة العروض" id="deals" style="scroll-margin-top:80px">
@@ -108,7 +106,7 @@
   </footer>
 </main>
 
-<script src="assets/common.js?v=8"></script>
+<script src="assets/common.js?v=9"></script>
 <script>
 (function(){
 const {CATS,DAY,BF,fmt,disc,saving,isNew,expired,dayLabel,safeUrl,el,productUrl,picture,discountTag,card,loadData,setStatus}=BFR;
@@ -211,54 +209,13 @@ function renderCamps(){
   }
 }
 
-/* coupons */
-async function copyText(t){
-  try{await navigator.clipboard.writeText(t);return true}catch(e){}
-  const x=document.createElement("textarea");x.value=t;x.setAttribute("readonly","");x.style.position="fixed";x.style.opacity="0";document.body.appendChild(x);x.select();
-  let ok=false;try{ok=document.execCommand("copy")}catch(e){}x.remove();return ok;
-}
-const COUP_FIRST=6;let cs={store:"all",all:false};
-$("coupMore").onclick=()=>{cs.all=!cs.all;renderCoupons();if(!cs.all)$("coupWrap").scrollIntoView()};
+/* coupons: a small strip; the full list lives on coupons.html */
 function renderCoupons(){
   const wrap=$("coupWrap"),box=$("coupons");box.textContent="";
-  let live=coupons.filter(c=>!expired(c));
+  const live=BFR.mixCoupons(coupons.filter(c=>!expired(c)));
   wrap.hidden=!live.length;if(!live.length)return;
-  // codes before no-code offers, newest first, then take turns between stores so one store doesn't fill the top
-  const order={code:0,bank:1,auto:2};
-  live.sort((a,b)=>order[a.kind]-order[b.kind]||(b.addedAt||"").localeCompare(a.addedAt||""));
-  const byStore=new Map();for(const c of live){const k=c.kind+"|"+c.store;if(!byStore.has(k))byStore.set(k,[]);byStore.get(k).push(c)}
-  const mixed=[];for(const kind of ["code","bank","auto"]){const qs=[...byStore].filter(([k])=>k.startsWith(kind+"|")).map(([,v])=>v.slice());while(qs.some(q=>q.length))for(const q of qs)if(q.length)mixed.push(q.shift())}
-  live=mixed;
-  $("coupNote").textContent=live.length+" كوبون شغّال";
-  const stores=[...new Set(live.map(c=>c.store))].sort();
-  if(cs.store!=="all"&&!stores.includes(cs.store))cs.store="all";
-  const ch=$("coupChips");ch.textContent="";ch.hidden=stores.length<2;
-  [["all","الكل"],...stores.map(s=>[s,s])].forEach(([v,label])=>{
-    const n=v==="all"?live.length:live.filter(c=>c.store===v).length;
-    const b=el("button","chip",label+" ("+n+")");b.type="button";b.setAttribute("aria-pressed",String(cs.store===v));
-    b.onclick=()=>{cs.store=v;cs.all=false;renderCoupons()};ch.appendChild(b);
-  });
-  const list=live.filter(c=>cs.store==="all"||c.store===cs.store);
-  const more=$("coupMore");more.hidden=list.length<=COUP_FIRST;
-  more.textContent=cs.all?"اعرض أقل ↑":"شوف كل الكوبونات ("+list.length+") ↓";
-  for(const c of (cs.all?list:list.slice(0,COUP_FIRST))){
-    const k=el("article","coupon");
-    const off=el("div","off");off.appendChild(el("span","num",c.off)).dir="auto";off.appendChild(el("small",null,c.kind==="bank"?"بالكارت":"خصم"));k.appendChild(off);
-    const b=el("div","body");
-    const m=el("div","meta");m.appendChild(el("span","store",c.store));if(isNew(c))m.appendChild(el("span","new","● جديد"));b.appendChild(m);
-    b.appendChild(el("h3",null,c.title));
-    if(c.kind==="code"){
-      const row=el("div","code");row.appendChild(el("b",null,c.code));
-      const btn=el("button",null,"انسخ الكود");btn.type="button";btn.setAttribute("aria-label","انسخ الكود "+c.code);
-      btn.onclick=async()=>{const ok=await copyText(c.code);btn.textContent=ok?"اتنسخ ✓":"انسخه بإيدك";btn.classList.toggle("done",ok);setTimeout(()=>{btn.textContent="انسخ الكود";btn.classList.remove("done")},2000)};
-      row.appendChild(btn);b.appendChild(row);
-    }else b.appendChild(el("span","nocode",c.kind==="bank"?"من غير كود · الخصم بيتطبق لما تدفع بالكارت":"من غير كود · الخصم بيتطبق لوحده"));
-    const t=[];if(c.minOrder)t.push("أقل طلب "+fmt(c.minOrder)+" ج.م");if(c.maxOff)t.push("أقصى خصم "+fmt(c.maxOff)+" ج.م");if(c.endsAt)t.push("لحد "+dayLabel(c.endsAt));if(c.note)t.push(c.note);
-    if(t.length)b.appendChild(el("p","terms num",t.join(" · ")));
-    const s=el("div","src");const u=safeUrl(c.url);
-    if(u){const a=el("a",null,"شوف الشروط عند "+c.store+" ←");a.href=u;a.target="_blank";a.rel="noopener nofollow";s.appendChild(a)}
-    b.appendChild(s);k.appendChild(b);box.appendChild(k);
-  }
+  $("coupAll").textContent="كل الكوبونات ("+live.length+") ←";
+  for(const c of live.slice(0,10))box.appendChild(BFR.couponMini(c));
 }
 
 /* grid + pagination */
