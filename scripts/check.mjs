@@ -48,8 +48,30 @@ for (const [i, c] of (data.campaigns || []).entries()) {
   if (!DATE.test(c.start || "") || !DATE.test(c.end || "")) errors.push(`${at}: start and end must be YYYY-MM-DD`);
 }
 
+const KINDS = ["code", "bank", "auto"];
+if (data.coupons != null && !Array.isArray(data.coupons)) errors.push("coupons must be an array");
+const cids = new Set();
+for (const [i, c] of (data.coupons || []).entries()) {
+  const at = `coupons[${i}] (${c && c.id})`;
+  if (!c || typeof c !== "object") { errors.push(`${at}: not an object`); continue; }
+  if (!/^[A-Za-z0-9-]+$/.test(c.id || "")) errors.push(`${at}: bad id`);
+  if (cids.has(c.id)) errors.push(`${at}: duplicate id`);
+  cids.add(c.id);
+  if (!c.store || typeof c.store !== "string") errors.push(`${at}: missing store`);
+  if (!KINDS.includes(c.kind)) errors.push(`${at}: kind must be one of ${KINDS.join(", ")}`);
+  if (c.kind === "code" && !/^[A-Za-z0-9_-]{2,30}$/.test(c.code || "")) errors.push(`${at}: kind "code" needs a code (letters, digits, - or _)`);
+  if (c.kind !== "code" && c.code != null) errors.push(`${at}: only kind "code" may have a code`);
+  if (!c.title || typeof c.title !== "string") errors.push(`${at}: missing title`);
+  if (!c.off || typeof c.off !== "string" || c.off.length > 12) errors.push(`${at}: off must be a short string like "10%" or "300 ج.م"`);
+  for (const k of ["minOrder", "maxOff"]) if (c[k] != null && (typeof c[k] !== "number" || c[k] <= 0)) errors.push(`${at}: ${k} must be a positive number`);
+  try { if (new URL(c.url).protocol !== "https:") errors.push(`${at}: url must be https`); }
+  catch { errors.push(`${at}: bad url`); }
+  if (isNaN(Date.parse(c.addedAt))) errors.push(`${at}: addedAt is not a date`);
+  if (c.endsAt != null && !DATE.test(c.endsAt)) errors.push(`${at}: endsAt must be YYYY-MM-DD`);
+}
+
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
 }
-console.log(`OK: ${data.deals.length} deals, ${data.campaigns.length} campaigns`);
+console.log(`OK: ${data.deals.length} deals, ${data.campaigns.length} campaigns, ${(data.coupons || []).length} coupons`);

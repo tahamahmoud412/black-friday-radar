@@ -115,6 +115,27 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .pill.live{color:var(--ok)} .pill.soon{color:var(--soon)} .pill.over{color:var(--muted)}
 .conf{font-size:.75rem;color:var(--muted)}
 
+/* ---------- coupons: cut-out tickets ---------- */
+.coupons{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.coupon{position:relative;display:grid;grid-template-columns:86px 1fr;background:var(--surface);border:1px solid var(--line);border-radius:14px;min-width:0;overflow:hidden}
+.coupon .off{display:grid;place-items:center;align-content:center;gap:4px;padding:14px 6px;background:var(--tag);color:var(--tag-ink);font-family:var(--brand);font-size:1.6rem;line-height:1;text-align:center;border-inline-end:2px dashed rgb(27 22 48 / .45)}
+.coupon .off small{font-family:var(--body);font-size:.68rem;font-weight:600;opacity:.75}
+.coupon::before,.coupon::after{content:"";position:absolute;inset-inline-start:78px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:1px solid var(--line)}
+.coupon::before{top:-9px} .coupon::after{bottom:-9px}
+.coupon .body{display:grid;gap:8px;padding:12px 14px;min-width:0;align-content:start}
+.coupon .meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:.78rem}
+.coupon h3{font-family:var(--body);font-size:.95rem;font-weight:600;line-height:1.5}
+.coupon .code{display:flex;align-items:stretch;border:1.5px dashed var(--hot);border-radius:10px;overflow:hidden;direction:ltr}
+.coupon .code b{flex:1;min-width:0;padding:6px 8px;font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:.92rem;letter-spacing:.02em;white-space:nowrap;overflow-x:auto;scrollbar-width:none;user-select:all}
+.coupon .code button{border:0;background:var(--hot);color:#fff;font-weight:600;font-size:.82rem;padding:0 10px;cursor:pointer;white-space:nowrap;direction:rtl}
+.coupchips{display:flex;flex-wrap:wrap;gap:8px}
+.coupmore{justify-self:center}
+.coupon .code button.done{background:var(--ok)}
+.coupon .nocode{font-size:.82rem;font-weight:600;color:var(--ok)}
+.coupon .terms{margin:0;font-size:.8rem;color:var(--muted)}
+.coupon .src{font-size:.78rem;color:var(--muted)}
+.coupon .src a{color:inherit}
+
 /* ---------- filters ---------- */
 .bar{display:grid;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px}
 .bar .r{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -294,6 +315,9 @@ footer.site{color:var(--muted);font-size:.82rem;max-width:75ch}
   .camps{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:6px;margin-inline:calc(-1 * max(16px,env(safe-area-inset-right,0px))) calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-left,0px));scrollbar-width:none}
   .camps::-webkit-scrollbar{display:none}
   .camp{flex:0 0 82%;scroll-snap-align:start}
+  .coupons{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-block:10px 6px;margin-inline:calc(-1 * max(16px,env(safe-area-inset-right,0px))) calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-left,0px));scrollbar-width:none}
+  .coupons::-webkit-scrollbar{display:none}
+  .coupon{flex:0 0 88%;scroll-snap-align:start}
 
   /* filters: chips swipe sideways in one row */
   .bar{padding:12px;gap:10px}

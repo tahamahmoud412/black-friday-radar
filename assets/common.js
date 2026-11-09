@@ -74,7 +74,8 @@
     return {
       lastCheck: j.lastCheck || null,
       campaigns: (j.campaigns || []).filter(c => c && c.start && c.end),
-      deals: (j.deals || []).filter(d => d && d.id && d.title && typeof d.price === "number")
+      deals: (j.deals || []).filter(d => d && d.id && d.title && typeof d.price === "number"),
+      coupons: (j.coupons || []).filter(c => c && c.id && c.store && c.title && c.off && (c.kind !== "code" || c.code))
     };
   }
 
