@@ -1,5 +1,5 @@
 {
-  "lastCheck": "2026-11-23T20:26:28+02:00",
+  "lastCheck": "2026-11-24T00:04:43+02:00",
   "campaigns": [
     {
       "id": "jumia-bf-2026",
@@ -87,6 +87,76 @@
     }
   ],
   "deals": [
+    {
+      "id": "amazon-B092312R94",
+      "title": "ماكينة حلاقة VGR V-071 للرجالة",
+      "store": "أمازون مصر",
+      "category": "beauty",
+      "price": 322,
+      "oldPrice": 410,
+      "url": "https://www.amazon.eg/dp/B092312R94",
+      "image": "https://m.media-amazon.com/images/I/41JFlheqjGL._AC_SL500_.jpg",
+      "note": "عرض الوايت فرايداي",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-24T00:04:43+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0F1D312ML",
+      "title": "جهاز نيبولايزر Granzia Pionizer للكبار والأطفال",
+      "store": "أمازون مصر",
+      "category": "other",
+      "price": 1365,
+      "oldPrice": 2184,
+      "url": "https://www.amazon.eg/dp/B0F1D312ML",
+      "image": "https://m.media-amazon.com/images/I/41LtZfpjAGL._AC_SL500_.jpg",
+      "note": "عرض الوايت فرايداي",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-24T00:04:43+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0BXB2CNQ3",
+      "title": "جل غسول وش Vacation Hydro Gel 200 مل",
+      "store": "أمازون مصر",
+      "category": "beauty",
+      "price": 146.48,
+      "oldPrice": 276,
+      "url": "https://www.amazon.eg/dp/B0BXB2CNQ3",
+      "image": "https://m.media-amazon.com/images/I/31UJD1qckEL._AC_SL500_.jpg",
+      "note": "عرض الوايت فرايداي",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-24T00:04:43+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B082XRRPK9",
+      "title": "ليب جلوس Maybelline Lifter Gloss 004 Silk",
+      "store": "أمازون مصر",
+      "category": "beauty",
+      "price": 366,
+      "oldPrice": 570,
+      "url": "https://www.amazon.eg/dp/B082XRRPK9",
+      "image": "https://m.media-amazon.com/images/I/31n0NjDO2NL._AC_SL500_.jpg",
+      "note": "عرض الوايت فرايداي",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-24T00:04:43+02:00",
+      "source": "auto"
+    },
+    {
+      "id": "amazon-B0CWP5WHGG",
+      "title": "كريم Moist-1 باليوريا 100 جم",
+      "store": "أمازون مصر",
+      "category": "beauty",
+      "price": 79,
+      "oldPrice": 150,
+      "url": "https://www.amazon.eg/dp/B0CWP5WHGG",
+      "image": "https://m.media-amazon.com/images/I/41qmKDeZtzL._AC_SL500_.jpg",
+      "note": "عرض الوايت فرايداي",
+      "endsAt": "2026-11-30",
+      "addedAt": "2026-11-24T00:04:43+02:00",
+      "source": "auto"
+    },
     {
       "id": "amazon-B0F2B7FTW3",
       "title": "كوتشي adidas Cloudfoam Cuxxion رجالي",
